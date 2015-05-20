@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!-- the Element Default -->
+<MANGOGUI>
+ <!--FONT-->
+  <Font Type="DefaultFont"  IndexID ='0' name="Arial"  height='15' weight='400'/>
+
+<!--Caption-->
+  <Caption FontID ='0'>
+     	<TexRECT Left='17' Top ='269' Right ='241' Bottom='287'/>
+     	<TexColor R='0' G='0' B='0' A='255'/>
+     	<FontColor R='255' G='255' B='255' A='255'/>
+  </Caption>
+
+<!--Lable-->
+  <Lable FontID ='0' R='200' G='200' B='200' A='200'/>
+
+<!--Image-->  
+  <Image R='100' G='100' B='100' A='255'/>
+
+<!--Button-->
+  <Button FontID ='0'>
+     <ButtonNormal>
+	      <TexRECT Left='0' Top ='0' Right ='130' Bottom='43'/>
+	      <TexColorNormal R='255' G='255' B='255' A='150'/>
+	      <TexColorPress  R='255' G='255' B='255' A='200'/>
+        <FontColorMouseOver R='0' G='0' B='0' A='255'/>
+     </ButtonNormal>
+     <ButtonPress>
+	      <TexRECT Left='130' Top ='0' Right ='255' Bottom='43'/>
+	      <TexColorMouseOver R='255' G='255' B='255' A='160'/>
+	      <TexColorPress  R='0' G='0' B='0' A='60'/>
+        <TexColorFocus  R='255' G='255' B='255' A='30'/>
+     </ButtonPress>
+   </Button>
+
+<!--CheckBox-->  
+   <CheckBox FontID ='0'>
+      <CheckBoxNormal>
+	      <TexRECT Left='-2' Top ='48' Right ='27' Bottom='76'/>
+	      <FontColor R='255' G='255' B='255' A='255'/>
+	      <FontColorDisable  R='200' G='200' B='200' A='200'/>
+	      <TexColor R='255' G='255' B='255' A='150'/>
+	      <TexColorPress  R='255' G='255' B='255' A='255'/>
+        <TexColorFocus  R='255' G='255' B='255' A='200'/>
+      </CheckBoxNormal>
+      <CheckBoxSelect>
+	      <TexRECT Left='27' Top ='48' Right ='56' Bottom='76'/>
+      </CheckBoxSelect>
+   </CheckBox>
+
+<!--RadioButton-->
+   <RadioButton FontID ='0'>
+     <RadioButtonNormal>
+	     <TexRECT Left='70' Top ='76' Right ='100' Bottom='105'/>
+	     <FontColor R='255' G='255' B='255' A='255'/>
+	     <FontColorDisable  R='200' G='200' B='200' A='200'/>
+	     <TexColor R='255' G='255' B='255' A='150'/>
+	     <TexColorPress  R='255' G='255' B='255' A='255'/>
+       <TexColorFocus  R='255' G='255' B='255' A='200'/>
+     </RadioButtonNormal>
+    <RadioButtonSelect>      
+      <TexRECT Left='100' Top ='76' Right ='130' Bottom='105'/>
+    </RadioButtonSelect>
+   </RadioButton>
+  
+<!--ComboBox--> 
+   <ComboBox  FontID ='0'>
+      <ComboBoxEditBox>
+	      <TexRECT Left='0' Top ='105' Right ='167' Bottom='133'/>
+	      <TexColor R='200' G='200' B='200' A='150'/>
+	      <TexColorFocus  R='230' G='230' B='230' A='170'/>
+	      <TexColorDisable  R='200' G='200' B='200' A='70'/>
+	      <FontColorMouseOver  R='0' G='0' B='0' A='255'/>
+	      <FontColorPress  R='0' G='0' B='0' A='255'/>
+	      <FontColorDisable  R='200' G='200' B='200' A='200'/>
+      </ComboBoxEditBox>
+      <ComboBoxButton>
+	      <TexRECT Left='192' Top ='105' Right ='215' Bottom='133'/>  
+	      <TexColor R='255' G='255' B='255' A='150'/>
+	      <TexColorDisable  R='200' G='200' B='200' A='70'/> 
+	      <TexColorFocus  R='230' G='230' B='230' A='200'/>
+	      <TexColorPress  R='150' G='150' B='150' A='255'/>
+      </ComboBoxButton>
+      <ComboBoxDropdown>
+	      <TexRECT Left='0' Top ='132' Right ='190' Bottom='160'/>  
+        <FontColor R='0' G='0' B='0' A='255'/>
+      </ComboBoxDropdown>
+      <ComboBoxSelection>
+      </ComboBoxSelection>
+   </ComboBox>
+  
+<!--Slider-->
+   <Slider>
+     <SliderTrack></SliderTrack>
+     <SliderButton></SliderButton>
+   </Slider>
+
+<!--ScrollBar-->
+   <ScrollBar>
+      <ScrollBarTrack></ScrollBarTrack>
+      <ScrollBarUpArrow></ScrollBarUpArrow>
+      <ScrollBarDownArrow></ScrollBarDownArrow>
+      <ScrollBarButton></ScrollBarButton>
+   </ScrollBar>
+
+<!--EditBox-->
+   <EditBox></EditBox>
+
+<!--IMEEditBox-->
+   <IMEEditBox></IMEEditBox>
+
+<!--ListBox-->
+   <ListBox>
+       <ListBoxMain></ListBoxMain>
+       <ListBoxSelection></ListBoxSelection>
+   </ListBox>
+  
+</MANGOGUI>

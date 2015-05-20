@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gb2312"?>
+<RESOURCE>
+  <MAXLAYOUT>6</MAXLAYOUT>
+  <BRUSH num="188" >
+    <DIRT     path="Res/Ground/Dirt/dirt%02d.png"        num="18" ></DIRT>
+    <GRASS    path="Res/Ground/Grass/grass%02d.png"      num="18" ></GRASS>
+    <PLANET   path="Res/Ground/planet/planet%02d.png"    num="18" ></PLANET>
+    <SAND     path="Res/Ground/sand/sand%02d.png"        num="18" ></SAND>
+    <SNOW     path="Res/Ground/snow/snow%02d.png"        num="18" ></SNOW>
+    <STONE    path="Res/Ground/stone/stone%02d.png"      num="18" ></STONE>
+    <ITEM     path="Res/Item/item%02d.png"      num="16" ></ITEM>
+    <TILE     path="Res/Tile/tile%02d.png"      num="32" ></TILE>
+    <TILEX    path="Res/TileX/tilex%02d.png"    num="32" ></TILEX>
+  </BRUSH>
+  <NPC num="5" >
+    <PLAYER   path="Res/Player/player%d.png"    num="5" ></PLAYER>
+  </NPC>
+  <MONSTER num="18" >
+    <ENEMY    path="Res/Enemy/enemy%02d.png"    num="18" ></ENEMY>
+  </MONSTER>
+  <COLL num="2" >
+    <COLL     path="Res/Coll/c%d.png"           num="2" ></COLL>
+  </COLL>
+  <TRIG num="16" >
+    <TRIG     path="Res/Trigger/t%d.png"        num="16" ></TRIG>
+  </TRIG>
+  <BACK num="8" >
+    <BACK     path="Res/Back/Map%03d.png"       num="8" ></BACK>
+  </BACK>
+</RESOURCE>

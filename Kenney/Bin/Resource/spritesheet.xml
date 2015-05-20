@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="sprites">
+	
+	<Brush>
+		<SubTexture name="dirt" x="1820" y="910" width="128" height="128"/>
+		<SubTexture name="dirtCenter" x="1820" y="780" width="128" height="128"/>
+		<SubTexture name="dirtCenter_rounded" x="1820" y="650" width="128" height="128"/>
+		<SubTexture name="dirtCliffAlt_left" x="1820" y="520" width="128" height="128"/>
+		<SubTexture name="dirtCliffAlt_right" x="1820" y="390" width="128" height="128"/>
+		<SubTexture name="dirtCliff_left" x="1820" y="260" width="128" height="128"/>
+		<SubTexture name="dirtCliff_right" x="1820" y="130" width="128" height="128"/>
+		<SubTexture name="dirtCorner_left" x="1820" y="0" width="128" height="128"/>
+		<SubTexture name="dirtCorner_right" x="1690" y="1820" width="128" height="128"/>
+		<SubTexture name="dirtHalf" x="1690" y="1690" width="128" height="128"/>
+		<SubTexture name="dirtHalf_left" x="1690" y="1560" width="128" height="128"/>
+		<SubTexture name="dirtHalf_mid" x="1690" y="1430" width="128" height="128"/>
+		<SubTexture name="dirtHalf_right" x="1690" y="1300" width="128" height="128"/>
+		<SubTexture name="dirtHill_left" x="1690" y="1170" width="128" height="128"/>
+		<SubTexture name="dirtHill_right" x="1690" y="1040" width="128" height="128"/>
+		<SubTexture name="dirtLeft" x="1690" y="910" width="128" height="128"/>
+		<SubTexture name="dirtMid" x="1690" y="780" width="128" height="128"/>
+		<SubTexture name="dirtRight" x="1690" y="650" width="128" height="128"/>
+
+		<SubTexture name="grass" x="1690" y="520" width="128" height="128"/>
+		<SubTexture name="grassCenter" x="1690" y="390" width="128" height="128"/>
+		<SubTexture name="grassCenter_round" x="1690" y="260" width="128" height="128"/>
+		<SubTexture name="grassCliffAlt_left" x="1690" y="130" width="128" height="128"/>
+		<SubTexture name="grassCliffAlt_right" x="1690" y="0" width="128" height="128"/>
+		<SubTexture name="grassCliff_left" x="1560" y="1820" width="128" height="128"/>
+		<SubTexture name="grassCliff_right" x="1560" y="1690" width="128" height="128"/>
+		<SubTexture name="grassCorner_left" x="1560" y="1560" width="128" height="128"/>
+		<SubTexture name="grassCorner_right" x="1560" y="1430" width="128" height="128"/>
+		<SubTexture name="grassHalf" x="1560" y="1300" width="128" height="128"/>
+		<SubTexture name="grassHalf_left" x="1560" y="1170" width="128" height="128"/>
+		<SubTexture name="grassHalf_mid" x="1560" y="1040" width="128" height="128"/>
+		<SubTexture name="grassHalf_right" x="1560" y="910" width="128" height="128"/>
+		<SubTexture name="grassHill_left" x="1560" y="780" width="128" height="128"/>
+		<SubTexture name="grassHill_right" x="1560" y="650" width="128" height="128"/>
+		<SubTexture name="grassLeft" x="1560" y="520" width="128" height="128"/>
+		<SubTexture name="grassMid" x="1560" y="390" width="128" height="128"/>
+		<SubTexture name="grassRight" x="1560" y="260" width="128" height="128"/>
+
+		<SubTexture name="planet" x="1560" y="130" width="128" height="128"/>
+		<SubTexture name="planetCenter" x="1560" y="0" width="128" height="128"/>
+		<SubTexture name="planetCenter_rounded" x="1430" y="1820" width="128" height="128"/>
+		<SubTexture name="planetCliffAlt_left" x="1430" y="1690" width="128" height="128"/>
+		<SubTexture name="planetCliffAlt_right" x="1430" y="1560" width="128" height="128"/>
+		<SubTexture name="planetCliff_left" x="1430" y="1430" width="128" height="128"/>
+		<SubTexture name="planetCliff_right" x="1430" y="1300" width="128" height="128"/>
+		<SubTexture name="planetCorner_left" x="1430" y="1170" width="128" height="128"/>
+		<SubTexture name="planetCorner_right" x="1430" y="1040" width="128" height="128"/>
+		<SubTexture name="planetHalf" x="1430" y="910" width="128" height="128"/>
+		<SubTexture name="planetHalf_left" x="1430" y="780" width="128" height="128"/>
+		<SubTexture name="planetHalf_mid" x="1430" y="650" width="128" height="128"/>
+		<SubTexture name="planetHalf_right" x="1430" y="520" width="128" height="128"/>
+		<SubTexture name="planetHill_left" x="1430" y="390" width="128" height="128"/>
+		<SubTexture name="planetHill_right" x="1430" y="260" width="128" height="128"/>
+		<SubTexture name="planetLeft" x="1430" y="130" width="128" height="128"/>
+		<SubTexture name="planetMid" x="1430" y="0" width="128" height="128"/>
+		<SubTexture name="planetRight" x="1300" y="1820" width="128" height="128"/>
+
+		<SubTexture name="sand" x="1300" y="1690" width="128" height="128"/>
+		<SubTexture name="sandCenter" x="1300" y="1560" width="128" height="128"/>
+		<SubTexture name="sandCenter_rounded" x="1300" y="1430" width="128" height="128"/>
+		<SubTexture name="sandCliffAlt_left" x="1300" y="1300" width="128" height="128"/>
+		<SubTexture name="sandCliffAlt_right" x="1300" y="1170" width="128" height="128"/>
+		<SubTexture name="sandCliff_left" x="1300" y="1040" width="128" height="128"/>
+		<SubTexture name="sandCliff_right" x="1300" y="910" width="128" height="128"/>
+		<SubTexture name="sandCorner_leftg" x="1300" y="780" width="128" height="128"/>
+		<SubTexture name="sandCorner_right" x="1300" y="650" width="128" height="128"/>
+		<SubTexture name="sandHalf" x="1300" y="520" width="128" height="128"/>
+		<SubTexture name="sandHalf_left" x="1300" y="390" width="128" height="128"/>
+		<SubTexture name="sandHalf_mid" x="1300" y="260" width="128" height="128"/>
+		<SubTexture name="sandHalf_right" x="1300" y="130" width="128" height="128"/>
+		<SubTexture name="sandHill_left" x="1300" y="0" width="128" height="128"/>
+		<SubTexture name="sandHill_right" x="1170" y="1820" width="128" height="128"/>
+		<SubTexture name="sandLeft" x="1170" y="1690" width="128" height="128"/>
+		<SubTexture name="sandMid" x="1170" y="1560" width="128" height="128"/>
+		<SubTexture name="sandRight" x="1170" y="1430" width="128" height="128"/>
+
+		<SubTexture name="snow" x="1170" y="1300" width="128" height="128"/>
+		<SubTexture name="snowCenter" x="1170" y="1170" width="128" height="128"/>
+		<SubTexture name="snowCenter_rounded" x="1170" y="1040" width="128" height="128"/>
+		<SubTexture name="snowCliffAlt_left" x="1170" y="910" width="128" height="128"/>
+		<SubTexture name="snowCliffAlt_right" x="1170" y="780" width="128" height="128"/>
+		<SubTexture name="snowCliff_left" x="1170" y="650" width="128" height="128"/>
+		<SubTexture name="snowCliff_right" x="1170" y="520" width="128" height="128"/>
+		<SubTexture name="snowCorner_left" x="1170" y="390" width="128" height="128"/>
+		<SubTexture name="snowCorner_right" x="1170" y="260" width="128" height="128"/>
+		<SubTexture name="snowHalf" x="1170" y="130" width="128" height="128"/>
+		<SubTexture name="snowHalf_left" x="1170" y="0" width="128" height="128"/>
+		<SubTexture name="snowHalf_mid" x="1040" y="1820" width="128" height="128"/>
+		<SubTexture name="snowHalf_right" x="1040" y="1690" width="128" height="128"/>
+		<SubTexture name="snowHill_left" x="1040" y="1560" width="128" height="128"/>
+		<SubTexture name="snowHill_right" x="1040" y="1430" width="128" height="128"/>
+		<SubTexture name="snowLeft" x="1040" y="1300" width="128" height="128"/>
+		<SubTexture name="snowMid" x="1040" y="1170" width="128" height="128"/>
+		<SubTexture name="snowRight" x="1040" y="1040" width="128" height="128"/>
+
+		<SubTexture name="stone" x="1040" y="910" width="128" height="128"/>
+		<SubTexture name="stoneCenter" x="1040" y="780" width="128" height="128"/>
+		<SubTexture name="stoneCenter_rounded" x="1040" y="650" width="128" height="128"/>
+		<SubTexture name="stoneCliffAlt_left" x="1040" y="520" width="128" height="128"/>
+		<SubTexture name="stoneCliffAlt_right" x="1040" y="390" width="128" height="128"/>
+		<SubTexture name="stoneCliff_left" x="1040" y="260" width="128" height="128"/>
+		<SubTexture name="stoneCliff_right" x="1040" y="130" width="128" height="128"/>
+		<SubTexture name="stoneCorner_left" x="1040" y="0" width="128" height="128"/>
+		<SubTexture name="stoneCorner_right" x="910" y="1808" width="128" height="128"/>
+		<SubTexture name="stoneHalf" x="910" y="1678" width="128" height="128"/>
+		<SubTexture name="stoneHalf_left" x="910" y="1548" width="128" height="128"/>
+		<SubTexture name="stoneHalf_mid" x="780" y="1806" width="128" height="128"/>
+		<SubTexture name="stoneHalf_right" x="650" y="1806" width="128" height="128"/>
+		<SubTexture name="stoneHill_left" x="520" y="1806" width="128" height="128"/>
+		<SubTexture name="stoneHill_right" x="390" y="1806" width="128" height="128"/>
+		<SubTexture name="stoneLeft" x="260" y="1806" width="128" height="128"/>
+		<SubTexture name="stoneMid" x="130" y="1806" width="128" height="128"/>
+		<SubTexture name="stoneRight" x="0" y="1806" width="128" height="128"/>
+
+		<SubTexture name="coinBronze" x="2730" y="130" width="128" height="128"/>
+		<SubTexture name="coinGold" x="2730" y="0" width="128" height="128"/>
+		<SubTexture name="coinSilver" x="2600" y="1820" width="128" height="128"/>
+		<SubTextureGroup>
+			<SubTexture name="flagBlue1" x="2600" y="1690" width="128" height="128"/>
+			<SubTexture name="flagBlue2" x="2600" y="1560" width="128" height="128"/>
+			<SubTexture name="flagBlue_down" x="2600" y="1430" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="flagGreen1" x="2600" y="1300" width="128" height="128"/>
+			<SubTexture name="flagGreen2" x="2600" y="1170" width="128" height="128"/>
+			<SubTexture name="flagGreen_down" x="2600" y="1040" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="flagRed1" x="2600" y="910" width="128" height="128"/>
+			<SubTexture name="flagRed2" x="2600" y="780" width="128" height="128"/>
+			<SubTexture name="flagRed_down" x="2600" y="650" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="flagYellow1" x="2600" y="520" width="128" height="128"/>
+			<SubTexture name="flagYellow2" x="2600" y="390" width="128" height="128"/>
+			<SubTexture name="flagYellow_down" x="2600" y="260" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTexture name="gemBlue" x="2600" y="130" width="128" height="128"/>
+		<SubTexture name="gemGreen" x="2600" y="0" width="128" height="128"/>
+		<SubTexture name="gemRed" x="2470" y="1820" width="128" height="128"/>
+		<SubTexture name="gemYellow" x="2470" y="1690" width="128" height="128"/>
+		<SubTexture name="keyBlue" x="2470" y="1560" width="128" height="128"/>
+		<SubTexture name="keyGreen" x="2470" y="1430" width="128" height="128"/>
+		<SubTexture name="keyRed" x="2470" y="1300" width="128" height="128"/>
+		<SubTexture name="keyYellow" x="2470" y="1170" width="128" height="128"/>
+		<SubTexture name="star" x="2470" y="1040" width="128" height="128"/>
+
+		<SubTextureGroup>
+			<SubTexture name="bomb" x="2470" y="520" width="128" height="128"/>
+			<SubTexture name="bombWhite" x="2470" y="390" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTexture name="boxCoin" x="2470" y="260" width="128" height="128"/>
+		<SubTexture name="boxCoin_boxed" x="2470" y="130" width="128" height="128"/>
+		<SubTexture name="boxCoin_disabled" x="2470" y="0" width="128" height="128"/>
+		<SubTexture name="boxCoin_disabled_boxed" x="2340" y="1820" width="128" height="128"/>
+		<SubTexture name="boxCrate" x="2340" y="1690" width="128" height="128"/>
+		<SubTexture name="boxCrate_double" x="2340" y="1560" width="128" height="128"/>
+		<SubTexture name="boxCrate_single" x="2340" y="1430" width="128" height="128"/>
+		<SubTexture name="boxCrate_warning" x="2340" y="1300" width="128" height="128"/>
+		<SubTexture name="boxExplosive" x="2340" y="1170" width="128" height="128"/>
+		<SubTexture name="boxExplosive_disabled" x="2340" y="1040" width="128" height="128"/>
+		<SubTexture name="boxExplosive_used" x="2340" y="910" width="128" height="128"/>
+		<SubTexture name="boxItem" x="2340" y="780" width="128" height="128"/>
+		<SubTexture name="boxItem_boxed" x="2340" y="650" width="128" height="128"/>
+		<SubTexture name="boxItem_disabled" x="2340" y="520" width="128" height="128"/>
+		<SubTexture name="boxItem_disabled_boxed" x="2340" y="390" width="128" height="128"/>
+		<SubTexture name="brickBrown" x="2340" y="260" width="128" height="128"/>
+		<SubTexture name="brickGrey" x="2340" y="130" width="128" height="128"/>
+		<SubTexture name="bridgeA" x="2340" y="0" width="128" height="128"/>
+		<SubTexture name="bridgeB" x="2210" y="1820" width="128" height="128"/>
+		<SubTexture name="bush" x="2210" y="1690" width="128" height="128"/>
+		<SubTexture name="cactus" x="2210" y="1560" width="128" height="128"/>
+		<SubTexture name="chain" x="2210" y="1430" width="128" height="128"/>
+		<SubTexture name="doorClosed_mid" x="2210" y="1300" width="128" height="128"/>
+		<SubTexture name="doorClosed_top" x="2210" y="1170" width="128" height="128"/>
+		<SubTexture name="doorOpen_mid" x="2210" y="1040" width="128" height="128"/>
+		<SubTexture name="doorOpen_top" x="2210" y="910" width="128" height="128"/>
+		<SubTexture name="fence" x="2210" y="780" width="128" height="128"/>
+		<SubTexture name="fenceBroken" x="2210" y="650" width="128" height="128"/>
+		<SubTexture name="grass" x="2210" y="520" width="128" height="128"/>
+		<SubTexture name="ladderMid" x="2210" y="390" width="128" height="128"/>
+		<SubTexture name="ladderTop" x="2210" y="260" width="128" height="128"/>
+
+		<SubTexture name="lava" x="2210" y="130" width="128" height="128"/>
+		<SubTexture name="lavaTop_high" x="2210" y="0" width="128" height="128"/>
+		<SubTexture name="lavaTop_low" x="2080" y="1820" width="128" height="128"/>
+		<SubTexture name="leverLeft" x="2080" y="1690" width="128" height="128"/>
+		<SubTexture name="leverMid" x="2080" y="1560" width="128" height="128"/>
+		<SubTexture name="leverRight" x="2080" y="1430" width="128" height="128"/>
+		<SubTexture name="lockBlue" x="2080" y="1300" width="128" height="128"/>
+		<SubTexture name="lockGreen" x="2080" y="1170" width="128" height="128"/>
+		<SubTexture name="lockRed" x="2080" y="1040" width="128" height="128"/>
+		<SubTexture name="lockYellow" x="2080" y="910" width="128" height="128"/>
+		<SubTexture name="mushroomBrown" x="2080" y="780" width="128" height="128"/>
+		<SubTexture name="mushroomRed" x="2080" y="650" width="128" height="128"/>
+		<SubTexture name="plantPurple" x="2080" y="520" width="128" height="128"/>
+		<SubTexture name="rock" x="2080" y="390" width="128" height="128"/>
+		<SubTexture name="sign" x="2080" y="260" width="128" height="128"/>
+		<SubTexture name="signExit" x="2080" y="130" width="128" height="128"/>
+		<SubTexture name="signLeft" x="2080" y="0" width="128" height="128"/>
+		<SubTexture name="signRight" x="1950" y="1820" width="128" height="128"/>
+		<SubTexture name="snow" x="1950" y="1690" width="128" height="128"/>
+		<SubTexture name="spikes" x="1950" y="1560" width="128" height="128"/>
+		<SubTextureGroup>
+			<SubTexture name="spring" x="1950" y="1430" width="128" height="128"/>
+			<SubTexture name="sprung" x="1950" y="1300" width="128" height="128"/>	
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="switchBlue" x="1950" y="1170" width="128" height="128"/>
+			<SubTexture name="switchBlue_pressed" x="1950" y="1040" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="switchGreen" x="2470" y="780" width="128" height="128"/>
+			<SubTexture name="switchGreen_pressed" x="1950" y="780" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="switchRed" x="1950" y="650" width="128" height="128"/>
+			<SubTexture name="switchRed_pressed" x="1950" y="520" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="switchYellow" x="1950" y="390" width="128" height="128"/>
+			<SubTexture name="switchYellow_pressed" x="1950" y="260" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="torch1" x="1950" y="130" width="128" height="128"/>
+			<SubTexture name="torch2" x="1950" y="0" width="128" height="128"/>
+			<SubTexture name="torchOff" x="1820" y="1820" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTexture name="water" x="1820" y="1690" width="128" height="128"/>
+		<SubTexture name="waterTop_high" x="1820" y="1560" width="128" height="128"/>
+		<SubTexture name="waterTop_low" x="1820" y="1430" width="128" height="128"/>
+		<SubTexture name="weight" x="1820" y="1300" width="128" height="128"/>
+		<SubTexture name="weightAttached" x="1820" y="1170" width="128" height="128"/>
+		<SubTexture name="window" x="1820" y="1040" width="128" height="128"/>
+	</Brush>
+
+	<Enemy>
+		<SubTextureGroup>
+			<SubTexture name="barnacle" x="1950" y="910" width="128" height="128"/>
+			<SubTexture name="barnacle_attack" x="3250" y="650" width="128" height="128"/>
+			<SubTexture name="barnacle_dead" x="3250" y="520" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="bee" x="3510" y="130" width="128" height="128"/>
+			<SubTexture name="bee_dead" x="3510" y="0" width="128" height="128"/>
+			<SubTexture name="bee_move" x="3380" y="1820" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="fishBlue" x="3380" y="1690" width="128" height="128"/>
+			<SubTexture name="fishBlue_dead" x="3380" y="1560" width="128" height="128"/>
+			<SubTexture name="fishBlue_fall" x="3380" y="1430" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="fishGreen" x="3380" y="1300" width="128" height="128"/>
+			<SubTexture name="fishGreen_dead" x="3380" y="1170" width="128" height="128"/>
+			<SubTexture name="fishGreen_move" x="3380" y="1040" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="fishPink" x="3380" y="910" width="128" height="128"/>
+			<SubTexture name="fishPink_dead" x="3380" y="780" width="128" height="128"/>
+			<SubTexture name="fishPink_move" x="3380" y="650" width="128" height="128"/>	
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="fly" x="3380" y="520" width="128" height="128"/>
+			<SubTexture name="fly_dead" x="3380" y="390" width="128" height="128"/>
+			<SubTexture name="fly_move" x="3380" y="260" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="frog" x="3380" y="130" width="128" height="128"/>
+			<SubTexture name="frog_dead" x="3380" y="0" width="128" height="128"/>
+			<SubTexture name="frog_move" x="3250" y="1820" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="ladybug" x="3250" y="1690" width="128" height="128"/>
+			<SubTexture name="ladybug_fly" x="3250" y="1560" width="128" height="128"/>
+			<SubTexture name="ladybug_move" x="3250" y="1430" width="128" height="128"/>	
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="mouse" x="3250" y="1300" width="128" height="128"/>
+			<SubTexture name="mouse_dead" x="3250" y="1170" width="128" height="128"/>
+			<SubTexture name="mouse_move" x="3250" y="1040" width="128" height="128"/>	
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="saw" x="3250" y="910" width="128" height="128"/>
+			<SubTexture name="saw_dead" x="3250" y="390" width="128" height="128"/>
+			<SubTexture name="saw_move" x="3250" y="260" width="128" height="128"/>	
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="sawHalf" x="3250" y="780" width="128" height="128"/>
+			<SubTexture name="sawHalf_dead" x="2990" y="780" width="128" height="128"/>
+			<SubTexture name="sawHalf_move" x="3510" y="260" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="slimeBlock" x="3250" y="130" width="128" height="128"/>
+			<SubTexture name="slimeBlock_dead" x="3250" y="0" width="128" height="128"/>
+			<SubTexture name="slimeBlock_move" x="3120" y="1820" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="slimeBlue" x="3120" y="1690" width="128" height="128"/>
+			<SubTexture name="slimeBlue_dead" x="3120" y="1560" width="128" height="128"/>
+			<SubTexture name="slimeBlue_hit" x="3120" y="1430" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="slimeBlue_move" x="3120" y="1300" width="128" height="128"/>
+			<SubTexture name="slimeGreen" x="3120" y="1170" width="128" height="128"/>
+			<SubTexture name="slimeGreen_dead" x="3120" y="1040" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="slimeGreen_hit" x="3120" y="910" width="128" height="128"/>
+			<SubTexture name="slimeGreen_move" x="3120" y="780" width="128" height="128"/>
+			<SubTexture name="slimePurple" x="3120" y="650" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="slimePurple_dead" x="3120" y="520" width="128" height="128"/>
+			<SubTexture name="slimePurple_hit" x="3120" y="390" width="128" height="128"/>
+			<SubTexture name="slimePurple_move" x="3120" y="260" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="snail" x="3120" y="130" width="128" height="128"/>
+			<SubTexture name="snail_move" x="3120" y="0" width="128" height="128"/>
+			<SubTexture name="snail_shell" x="2990" y="1820" width="128" height="128"/>	
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="wormGreen" x="2990" y="1690" width="128" height="128"/>
+			<SubTexture name="wormGreen_dead" x="2990" y="1560" width="128" height="128"/>
+			<SubTexture name="wormGreen_move" x="2990" y="1430" width="128" height="128"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="wormPink" x="2990" y="1300" width="128" height="128"/>
+			<SubTexture name="wormPink_dead" x="2990" y="1170" width="128" height="128"/>
+			<SubTexture name="wormPink_move" x="2990" y="1040" width="128" height="128"/>
+		</SubTextureGroup>
+	</Enemy>
+	
+	<Player>
+		<SubTextureGroup>
+			<SubTexture name="alienBeige_climb1" x="910" y="1290" width="128" height="256"/>
+			<SubTexture name="alienBeige_climb2" x="910" y="1032" width="128" height="256"/>
+			<SubTexture name="alienBeige_duck" x="910" y="774" width="128" height="256"/>
+			<SubTexture name="alienBeige_front" x="910" y="516" width="128" height="256"/>
+			<SubTexture name="alienBeige_hit" x="910" y="258" width="128" height="256"/>
+			<SubTexture name="alienBeige_jump" x="910" y="0" width="128" height="256"/>
+			<SubTexture name="alienBeige_stand" x="780" y="1548" width="128" height="256"/>
+			<SubTexture name="alienBeige_swim1" x="780" y="1290" width="128" height="256"/>
+			<SubTexture name="alienBeige_swim2" x="780" y="1032" width="128" height="256"/>
+			<SubTexture name="alienBeige_walk1" x="780" y="774" width="128" height="256"/>
+			<SubTexture name="alienBeige_walk2" x="780" y="516" width="128" height="256"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="alienBlue_climb1" x="780" y="258" width="128" height="256"/>
+			<SubTexture name="alienBlue_climb2" x="780" y="0" width="128" height="256"/>
+			<SubTexture name="alienBlue_duck" x="650" y="1548" width="128" height="256"/>
+			<SubTexture name="alienBlue_front" x="650" y="1290" width="128" height="256"/>
+			<SubTexture name="alienBlue_hit" x="650" y="1032" width="128" height="256"/>
+			<SubTexture name="alienBlue_jump" x="650" y="774" width="128" height="256"/>
+			<SubTexture name="alienBlue_stand" x="650" y="516" width="128" height="256"/>
+			<SubTexture name="alienBlue_swim1" x="650" y="258" width="128" height="256"/>
+			<SubTexture name="alienBlue_swim2" x="650" y="0" width="128" height="256"/>
+			<SubTexture name="alienBlue_walk1" x="520" y="1548" width="128" height="256"/>
+			<SubTexture name="alienBlue_walk2" x="520" y="1290" width="128" height="256"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="alienGreen_climb1" x="520" y="1032" width="128" height="256"/>
+			<SubTexture name="alienGreen_climb2" x="520" y="774" width="128" height="256"/>
+			<SubTexture name="alienGreen_duck" x="520" y="516" width="128" height="256"/>
+			<SubTexture name="alienGreen_front" x="520" y="258" width="128" height="256"/>
+			<SubTexture name="alienGreen_hit" x="520" y="0" width="128" height="256"/>
+			<SubTexture name="alienGreen_jump" x="390" y="1548" width="128" height="256"/>
+			<SubTexture name="alienGreen_stand" x="390" y="1290" width="128" height="256"/>
+			<SubTexture name="alienGreen_swim1" x="390" y="1032" width="128" height="256"/>
+			<SubTexture name="alienGreen_swim2" x="390" y="774" width="128" height="256"/>
+			<SubTexture name="alienGreen_walk1" x="390" y="516" width="128" height="256"/>
+			<SubTexture name="alienGreen_walk2" x="390" y="258" width="128" height="256"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="alienPink_climb1" x="390" y="0" width="128" height="256"/>
+			<SubTexture name="alienPink_climb2" x="260" y="1548" width="128" height="256"/>
+			<SubTexture name="alienPink_duck" x="260" y="1290" width="128" height="256"/>
+			<SubTexture name="alienPink_front" x="260" y="1032" width="128" height="256"/>
+			<SubTexture name="alienPink_hit" x="260" y="774" width="128" height="256"/>
+			<SubTexture name="alienPink_jump" x="260" y="516" width="128" height="256"/>
+			<SubTexture name="alienPink_stand" x="260" y="258" width="128" height="256"/>
+			<SubTexture name="alienPink_swim1" x="260" y="0" width="128" height="256"/>
+			<SubTexture name="alienPink_swim2" x="130" y="1548" width="128" height="256"/>
+			<SubTexture name="alienPink_walk1" x="130" y="1290" width="128" height="256"/>
+			<SubTexture name="alienPink_walk2" x="130" y="1032" width="128" height="256"/>
+		</SubTextureGroup>
+		<SubTextureGroup>
+			<SubTexture name="alienYellow_climb1" x="130" y="774" width="128" height="256"/>
+			<SubTexture name="alienYellow_climb2" x="130" y="516" width="128" height="256"/>
+			<SubTexture name="alienYellow_duck" x="130" y="258" width="128" height="256"/>
+			<SubTexture name="alienYellow_front" x="130" y="0" width="128" height="256"/>
+			<SubTexture name="alienYellow_hit" x="0" y="1548" width="128" height="256"/>
+			<SubTexture name="alienYellow_jump" x="0" y="1290" width="128" height="256"/>
+			<SubTexture name="alienYellow_stand" x="0" y="1032" width="128" height="256"/>
+			<SubTexture name="alienYellow_swim1" x="0" y="774" width="128" height="256"/>
+			<SubTexture name="alienYellow_swim2" x="0" y="516" width="128" height="256"/>
+			<SubTexture name="alienYellow_walk1" x="0" y="258" width="128" height="256"/>
+			<SubTexture name="alienYellow_walk2" x="0" y="0" width="128" height="256"/>
+		</SubTextureGroup>
+	</Player>
+
+	<HUD>
+		<SubTexture name="hud0" x="2990" y="910" width="128" height="128"/>
+		<SubTexture name="hud1" x="2990" y="650" width="128" height="128"/>
+		<SubTexture name="hud2" x="2470" y="910" width="128" height="128"/>
+		<SubTexture name="hud3" x="2990" y="520" width="128" height="128"/>
+		<SubTexture name="hud4" x="2990" y="390" width="128" height="128"/>
+		<SubTexture name="hud5" x="2990" y="260" width="128" height="128"/>
+		<SubTexture name="hud6" x="2990" y="130" width="128" height="128"/>
+		<SubTexture name="hud7" x="2990" y="0" width="128" height="128"/>
+		<SubTexture name="hud8" x="2860" y="1820" width="128" height="128"/>
+		<SubTexture name="hud9" x="2860" y="1690" width="128" height="128"/>
+		<SubTexture name="hudCoin" x="2860" y="1560" width="128" height="128"/>
+		<SubTexture name="hudHeart_empty" x="2860" y="1430" width="128" height="128"/>
+		<SubTexture name="hudHeart_full" x="2860" y="1300" width="128" height="128"/>
+		<SubTexture name="hudHeart_half" x="2860" y="1170" width="128" height="128"/>
+		<SubTexture name="hudJewel_blue" x="2860" y="1040" width="128" height="128"/>
+		<SubTexture name="hudJewel_blue_empty" x="2860" y="910" width="128" height="128"/>
+		<SubTexture name="hudJewel_green" x="2860" y="780" width="128" height="128"/>
+		<SubTexture name="hudJewel_green_empty" x="2860" y="650" width="128" height="128"/>
+		<SubTexture name="hudJewel_red" x="2860" y="520" width="128" height="128"/>
+		<SubTexture name="hudJewel_red_empty" x="2860" y="390" width="128" height="128"/>
+		<SubTexture name="hudJewel_yellow" x="2860" y="260" width="128" height="128"/>
+		<SubTexture name="hudJewel_yellow_empty" x="2860" y="130" width="128" height="128"/>
+		<SubTexture name="hudKey_blue" x="2860" y="0" width="128" height="128"/>
+		<SubTexture name="hudKey_blue_empty" x="2730" y="1820" width="128" height="128"/>
+		<SubTexture name="hudKey_green" x="2730" y="1690" width="128" height="128"/>
+		<SubTexture name="hudKey_green_empty" x="2730" y="1560" width="128" height="128"/>
+		<SubTexture name="hudKey_red" x="2730" y="1430" width="128" height="128"/>
+		<SubTexture name="hudKey_red_empty" x="2730" y="1300" width="128" height="128"/>
+		<SubTexture name="hudKey_yellow" x="2730" y="1170" width="128" height="128"/>
+		<SubTexture name="hudKey_yellow_empty" x="2730" y="1040" width="128" height="128"/>
+		<SubTexture name="hudPlayer_beige" x="2730" y="910" width="128" height="128"/>
+		<SubTexture name="hudPlayer_blue" x="2730" y="780" width="128" height="128"/>
+		<SubTexture name="hudPlayer_green" x="2730" y="650" width="128" height="128"/>
+		<SubTexture name="hudPlayer_pink" x="2730" y="520" width="128" height="128"/>
+		<SubTexture name="hudPlayer_yellow" x="2730" y="390" width="128" height="128"/>
+		<SubTexture name="hudX" x="2730" y="260" width="128" height="128"/>
+	</HUD>
+	
+</TextureAtlas>

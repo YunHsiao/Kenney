@@ -1,0 +1,719 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\TG2DMapEditor.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""          // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MapEditor.ico"
+IDR_MapEditTYPE         ICON                    "res\\MapEditorDoc.ico"
+IDI_ICONCOLL            ICON                    "res\\coll.ico"
+IDI_ICONNONCOLL         ICON                    "res\\noncoll.ico"
+IDI_ICONTRIG            ICON                    "res\\t17.ico"
+IDI_ICON4               ICON                    "res\\ico\\dirt01.ico"
+IDI_ICON5               ICON                    "res\\ico\\dirt02.ico"
+IDI_ICON6               ICON                    "res\\ico\\dirt03.ico"
+IDI_ICON7               ICON                    "res\\ico\\dirt04.ico"
+IDI_ICON8               ICON                    "res\\ico\\dirt05.ico"
+IDI_ICON10              ICON                    "res\\ico\\dirt06.ico"
+IDI_ICON11              ICON                    "res\\ico\\dirt07.ico"
+IDI_ICON12              ICON                    "res\\ico\\dirt08.ico"
+IDI_ICON13              ICON                    "res\\ico\\dirt09.ico"
+IDI_ICON14              ICON                    "res\\ico\\dirt10.ico"
+IDI_ICON15              ICON                    "res\\ico\\dirt11.ico"
+IDI_ICON16              ICON                    "res\\ico\\dirt12.ico"
+IDI_ICON17              ICON                    "res\\ico\\dirt13.ico"
+IDI_ICON18              ICON                    "res\\ico\\dirt14.ico"
+IDI_ICON19              ICON                    "res\\ico\\dirt15.ico"
+IDI_ICON20              ICON                    "res\\ico\\dirt16.ico"
+IDI_ICON21              ICON                    "res\\ico\\dirt17.ico"
+IDI_ICON22              ICON                    "res\\ico\\dirt18.ico"
+IDI_ICON23              ICON                    "res\\ico\\enemy01.ico"
+IDI_ICON24              ICON                    "res\\ico\\enemy02.ico"
+IDI_ICON25              ICON                    "res\\ico\\enemy03.ico"
+IDI_ICON26              ICON                    "res\\ico\\enemy04.ico"
+IDI_ICON27              ICON                    "res\\ico\\enemy05.ico"
+IDI_ICON28              ICON                    "res\\ico\\enemy06.ico"
+IDI_ICON29              ICON                    "res\\ico\\enemy07.ico"
+IDI_ICON30              ICON                    "res\\ico\\enemy08.ico"
+IDI_ICON31              ICON                    "res\\ico\\enemy09.ico"
+IDI_ICON32              ICON                    "res\\ico\\enemy10.ico"
+IDI_ICON33              ICON                    "res\\ico\\enemy11.ico"
+IDI_ICON34              ICON                    "res\\ico\\enemy12.ico"
+IDI_ICON35              ICON                    "res\\ico\\enemy13.ico"
+IDI_ICON36              ICON                    "res\\ico\\enemy14.ico"
+IDI_ICON37              ICON                    "res\\ico\\enemy15.ico"
+IDI_ICON38              ICON                    "res\\ico\\enemy16.ico"
+IDI_ICON39              ICON                    "res\\ico\\enemy17.ico"
+IDI_ICON40              ICON                    "res\\ico\\enemy18.ico"
+IDI_ICON41              ICON                    "res\\ico\\grass01.ico"
+IDI_ICON42              ICON                    "res\\ico\\grass02.ico"
+IDI_ICON43              ICON                    "res\\ico\\grass03.ico"
+IDI_ICON44              ICON                    "res\\ico\\grass04.ico"
+IDI_ICON45              ICON                    "res\\ico\\grass05.ico"
+IDI_ICON46              ICON                    "res\\ico\\grass06.ico"
+IDI_ICON47              ICON                    "res\\ico\\grass07.ico"
+IDI_ICON48              ICON                    "res\\ico\\grass08.ico"
+IDI_ICON49              ICON                    "res\\ico\\grass09.ico"
+IDI_ICON50              ICON                    "res\\ico\\grass10.ico"
+IDI_ICON51              ICON                    "res\\ico\\grass11.ico"
+IDI_ICON52              ICON                    "res\\ico\\grass12.ico"
+IDI_ICON53              ICON                    "res\\ico\\grass13.ico"
+IDI_ICON54              ICON                    "res\\ico\\grass14.ico"
+IDI_ICON55              ICON                    "res\\ico\\grass15.ico"
+IDI_ICON56              ICON                    "res\\ico\\grass16.ico"
+IDI_ICON57              ICON                    "res\\ico\\grass17.ico"
+IDI_ICON58              ICON                    "res\\ico\\grass18.ico"
+IDI_ICON59              ICON                    "res\\ico\\item01.ico"
+IDI_ICON60              ICON                    "res\\ico\\item02.ico"
+IDI_ICON61              ICON                    "res\\ico\\item03.ico"
+IDI_ICON62              ICON                    "res\\ico\\item04.ico"
+IDI_ICON63              ICON                    "res\\ico\\item05.ico"
+IDI_ICON64              ICON                    "res\\ico\\item06.ico"
+IDI_ICON65              ICON                    "res\\ico\\item07.ico"
+IDI_ICON66              ICON                    "res\\ico\\item08.ico"
+IDI_ICON67              ICON                    "res\\ico\\item09.ico"
+IDI_ICON68              ICON                    "res\\ico\\item10.ico"
+IDI_ICON69              ICON                    "res\\ico\\item11.ico"
+IDI_ICON70              ICON                    "res\\ico\\item12.ico"
+IDI_ICON71              ICON                    "res\\ico\\item13.ico"
+IDI_ICON72              ICON                    "res\\ico\\item14.ico"
+IDI_ICON73              ICON                    "res\\ico\\item15.ico"
+IDI_ICON74              ICON                    "res\\ico\\item16.ico"
+IDI_ICON75              ICON                    "res\\ico\\planet01.ico"
+IDI_ICON76              ICON                    "res\\ico\\planet02.ico"
+IDI_ICON77              ICON                    "res\\ico\\planet03.ico"
+IDI_ICON78              ICON                    "res\\ico\\planet04.ico"
+IDI_ICON79              ICON                    "res\\ico\\planet05.ico"
+IDI_ICON80              ICON                    "res\\ico\\planet06.ico"
+IDI_ICON81              ICON                    "res\\ico\\planet07.ico"
+IDI_ICON82              ICON                    "res\\ico\\planet08.ico"
+IDI_ICON83              ICON                    "res\\ico\\planet09.ico"
+IDI_ICON84              ICON                    "res\\ico\\planet10.ico"
+IDI_ICON85              ICON                    "res\\ico\\planet11.ico"
+IDI_ICON86              ICON                    "res\\ico\\planet12.ico"
+IDI_ICON87              ICON                    "res\\ico\\planet13.ico"
+IDI_ICON88              ICON                    "res\\ico\\planet14.ico"
+IDI_ICON89              ICON                    "res\\ico\\planet15.ico"
+IDI_ICON90              ICON                    "res\\ico\\planet16.ico"
+IDI_ICON91              ICON                    "res\\ico\\planet17.ico"
+IDI_ICON92              ICON                    "res\\ico\\planet18.ico"
+IDI_ICON93              ICON                    "res\\ico\\player1.ico"
+IDI_ICON94              ICON                    "res\\ico\\player2.ico"
+IDI_ICON95              ICON                    "res\\ico\\player3.ico"
+IDI_ICON96              ICON                    "res\\ico\\player4.ico"
+IDI_ICON97              ICON                    "res\\ico\\player5.ico"
+IDI_ICON98              ICON                    "res\\ico\\sand01.ico"
+IDI_ICON99              ICON                    "res\\ico\\sand02.ico"
+IDI_ICON100             ICON                    "res\\ico\\sand03.ico"
+IDI_ICON101             ICON                    "res\\ico\\sand04.ico"
+IDI_ICON102             ICON                    "res\\ico\\sand05.ico"
+IDI_ICON103             ICON                    "res\\ico\\sand06.ico"
+IDI_ICON104             ICON                    "res\\ico\\sand07.ico"
+IDI_ICON105             ICON                    "res\\ico\\sand08.ico"
+IDI_ICON106             ICON                    "res\\ico\\sand09.ico"
+IDI_ICON107             ICON                    "res\\ico\\sand10.ico"
+IDI_ICON108             ICON                    "res\\ico\\sand11.ico"
+IDI_ICON109             ICON                    "res\\ico\\sand12.ico"
+IDI_ICON110             ICON                    "res\\ico\\sand13.ico"
+IDI_ICON111             ICON                    "res\\ico\\sand14.ico"
+IDI_ICON112             ICON                    "res\\ico\\sand15.ico"
+IDI_ICON113             ICON                    "res\\ico\\sand16.ico"
+IDI_ICON114             ICON                    "res\\ico\\sand17.ico"
+IDI_ICON115             ICON                    "res\\ico\\sand18.ico"
+IDI_ICON116             ICON                    "res\\ico\\snow01.ico"
+IDI_ICON117             ICON                    "res\\ico\\snow02.ico"
+IDI_ICON118             ICON                    "res\\ico\\snow03.ico"
+IDI_ICON119             ICON                    "res\\ico\\snow04.ico"
+IDI_ICON120             ICON                    "res\\ico\\snow05.ico"
+IDI_ICON121             ICON                    "res\\ico\\snow06.ico"
+IDI_ICON122             ICON                    "res\\ico\\snow07.ico"
+IDI_ICON123             ICON                    "res\\ico\\snow08.ico"
+IDI_ICON124             ICON                    "res\\ico\\snow09.ico"
+IDI_ICON125             ICON                    "res\\ico\\snow10.ico"
+IDI_ICON126             ICON                    "res\\ico\\snow11.ico"
+IDI_ICON127             ICON                    "res\\ico\\snow12.ico"
+IDI_ICON128             ICON                    "res\\ico\\snow13.ico"
+IDI_ICON129             ICON                    "res\\ico\\snow14.ico"
+IDI_ICON130             ICON                    "res\\ico\\snow15.ico"
+IDI_ICON131             ICON                    "res\\ico\\snow16.ico"
+IDI_ICON132             ICON                    "res\\ico\\snow17.ico"
+IDI_ICON133             ICON                    "res\\ico\\snow18.ico"
+IDI_ICON134             ICON                    "res\\ico\\stone01.ico"
+IDI_ICON135             ICON                    "res\\ico\\stone02.ico"
+IDI_ICON136             ICON                    "res\\ico\\stone03.ico"
+IDI_ICON137             ICON                    "res\\ico\\stone04.ico"
+IDI_ICON138             ICON                    "res\\ico\\stone05.ico"
+IDI_ICON139             ICON                    "res\\ico\\stone06.ico"
+IDI_ICON140             ICON                    "res\\ico\\stone07.ico"
+IDI_ICON141             ICON                    "res\\ico\\stone08.ico"
+IDI_ICON142             ICON                    "res\\ico\\stone09.ico"
+IDI_ICON143             ICON                    "res\\ico\\stone10.ico"
+IDI_ICON144             ICON                    "res\\ico\\stone11.ico"
+IDI_ICON145             ICON                    "res\\ico\\stone12.ico"
+IDI_ICON146             ICON                    "res\\ico\\stone13.ico"
+IDI_ICON147             ICON                    "res\\ico\\stone14.ico"
+IDI_ICON148             ICON                    "res\\ico\\stone15.ico"
+IDI_ICON149             ICON                    "res\\ico\\stone16.ico"
+IDI_ICON150             ICON                    "res\\ico\\stone17.ico"
+IDI_ICON151             ICON                    "res\\ico\\stone18.ico"
+IDI_ICON152             ICON                    "res\\ico\\tile01.ico"
+IDI_ICON153             ICON                    "res\\ico\\tile02.ico"
+IDI_ICON154             ICON                    "res\\ico\\tile03.ico"
+IDI_ICON155             ICON                    "res\\ico\\tile04.ico"
+IDI_ICON156             ICON                    "res\\ico\\tile05.ico"
+IDI_ICON157             ICON                    "res\\ico\\tile06.ico"
+IDI_ICON158             ICON                    "res\\ico\\tile07.ico"
+IDI_ICON159             ICON                    "res\\ico\\tile08.ico"
+IDI_ICON160             ICON                    "res\\ico\\tile09.ico"
+IDI_ICON161             ICON                    "res\\ico\\tile10.ico"
+IDI_ICON162             ICON                    "res\\ico\\tile11.ico"
+IDI_ICON163             ICON                    "res\\ico\\tile12.ico"
+IDI_ICON164             ICON                    "res\\ico\\tile13.ico"
+IDI_ICON165             ICON                    "res\\ico\\tile14.ico"
+IDI_ICON166             ICON                    "res\\ico\\tile15.ico"
+IDI_ICON167             ICON                    "res\\ico\\tile16.ico"
+IDI_ICON168             ICON                    "res\\ico\\tile17.ico"
+IDI_ICON169             ICON                    "res\\ico\\tile18.ico"
+IDI_ICON170             ICON                    "res\\ico\\tile19.ico"
+IDI_ICON171             ICON                    "res\\ico\\tile20.ico"
+IDI_ICON172             ICON                    "res\\ico\\tile21.ico"
+IDI_ICON173             ICON                    "res\\ico\\tile22.ico"
+IDI_ICON174             ICON                    "res\\ico\\tile23.ico"
+IDI_ICON175             ICON                    "res\\ico\\tile24.ico"
+IDI_ICON176             ICON                    "res\\ico\\tile25.ico"
+IDI_ICON177             ICON                    "res\\ico\\tile26.ico"
+IDI_ICON178             ICON                    "res\\ico\\tile27.ico"
+IDI_ICON179             ICON                    "res\\ico\\tile28.ico"
+IDI_ICON180             ICON                    "res\\ico\\tile29.ico"
+IDI_ICON181             ICON                    "res\\ico\\tile30.ico"
+IDI_ICON182             ICON                    "res\\ico\\tile31.ico"
+IDI_ICON183             ICON                    "res\\ico\\tile32.ico"
+IDI_ICON184             ICON                    "res\\ico\\tilex01.ico"
+IDI_ICON185             ICON                    "res\\ico\\tilex02.ico"
+IDI_ICON186             ICON                    "res\\ico\\tilex03.ico"
+IDI_ICON187             ICON                    "res\\ico\\tilex04.ico"
+IDI_ICON188             ICON                    "res\\ico\\tilex05.ico"
+IDI_ICON189             ICON                    "res\\ico\\tilex06.ico"
+IDI_ICON190             ICON                    "res\\ico\\tilex07.ico"
+IDI_ICON191             ICON                    "res\\ico\\tilex08.ico"
+IDI_ICON192             ICON                    "res\\ico\\tilex09.ico"
+IDI_ICON193             ICON                    "res\\ico\\tilex10.ico"
+IDI_ICON194             ICON                    "res\\ico\\tilex11.ico"
+IDI_ICON195             ICON                    "res\\ico\\tilex12.ico"
+IDI_ICON196             ICON                    "res\\ico\\tilex13.ico"
+IDI_ICON197             ICON                    "res\\ico\\tilex14.ico"
+IDI_ICON198             ICON                    "res\\ico\\tilex15.ico"
+IDI_ICON199             ICON                    "res\\ico\\tilex16.ico"
+IDI_ICON200             ICON                    "res\\ico\\tilex17.ico"
+IDI_ICON201             ICON                    "res\\ico\\tilex18.ico"
+IDI_ICON202             ICON                    "res\\ico\\tilex19.ico"
+IDI_ICON203             ICON                    "res\\ico\\tilex20.ico"
+IDI_ICON204             ICON                    "res\\ico\\tilex21.ico"
+IDI_ICON205             ICON                    "res\\ico\\tilex22.ico"
+IDI_ICON206             ICON                    "res\\ico\\tilex23.ico"
+IDI_ICON207             ICON                    "res\\ico\\tilex24.ico"
+IDI_ICON208             ICON                    "res\\ico\\tilex25.ico"
+IDI_ICON209             ICON                    "res\\ico\\tilex26.ico"
+IDI_ICON210             ICON                    "res\\ico\\tilex27.ico"
+IDI_ICON211             ICON                    "res\\ico\\tilex28.ico"
+IDI_ICON212             ICON                    "res\\ico\\tilex29.ico"
+IDI_ICON213             ICON                    "res\\ico\\tilex30.ico"
+IDI_ICON214             ICON                    "res\\ico\\tilex31.ico"
+IDI_ICON215             ICON                    "res\\ico\\tilex32.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建地图(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "打开地图(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "关闭地图(&C)\tCtrl+C",            ID_FILE_CLOSE
+        MENUITEM "保存地图(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",              ID_EDIT_UNDO
+    END
+    POPUP "图层(&I)"
+    BEGIN
+        MENUITEM "画刷层",                         ID_LAYOUTBRUSH
+        MENUITEM "NPC层",                        ID_LAYOUTNPC
+        MENUITEM "怪物层",                         ID_LAYOUTMONSTER
+        MENUITEM "碰撞层",                         ID_LAYOUTCOLL
+        MENUITEM "触发层",                         ID_LAYOUTTRIGGER
+        MENUITEM "查看所有层",                       ID_LAYOUTALL
+    END
+    POPUP "地图(&M)"
+    BEGIN
+        MENUITEM "地图属性(&A)",                    ID_BACKSELECT
+        MENUITEM "地图测试(&T)",                    ID_MAPTEST
+        MENUITEM SEPARATOR
+        MENUITEM "碰撞层插值渲染",                     ID_32818
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 MapEditor(&A)...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "关于地图编辑器"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "地图编辑器",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "YunHsiao",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_DIALOGBRUSH DIALOGEX 0, 0, 345, 321
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "画刷"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "2",IDC_BUTTON2,12,60,66,30
+    PUSHBUTTON      "3",IDC_BUTTON3,12,96,66,30
+    PUSHBUTTON      "4",IDC_BUTTON4,12,132,66,30
+    CONTROL         "",IDC_TAB,"SysTabControl32",0x0,7,7,289,306
+    PUSHBUTTON      "5",IDC_BUTTON5,12,168,66,30
+    PUSHBUTTON      "1",IDC_BUTTON1,12,24,66,30
+    PUSHBUTTON      "6",IDC_BUTTON6,12,204,66,30
+    PUSHBUTTON      "7",IDC_BUTTON7,12,240,66,30
+    PUSHBUTTON      "8",IDC_BUTTON8,12,276,66,30
+    PUSHBUTTON      "9",IDC_BUTTON9,84,24,66,30
+    PUSHBUTTON      "10",IDC_BUTTON10,84,60,66,30
+    PUSHBUTTON      "11",IDC_BUTTON11,84,96,66,30
+    PUSHBUTTON      "12",IDC_BUTTON12,84,132,66,30
+    PUSHBUTTON      "13",IDC_BUTTON13,84,168,66,30
+    PUSHBUTTON      "14",IDC_BUTTON14,84,204,66,30
+    PUSHBUTTON      "15",IDC_BUTTON15,84,240,66,30
+    PUSHBUTTON      "16",IDC_BUTTON16,84,276,66,30
+    LISTBOX         IDC_BRUSHLIST,302,19,36,294,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "触发地图ID",IDC_STATIC,298,7,40,8
+    PUSHBUTTON      "17",IDC_BUTTON17,155,24,66,30
+    PUSHBUTTON      "18",IDC_BUTTON18,155,60,66,30
+    PUSHBUTTON      "19",IDC_BUTTON19,155,96,66,30
+    PUSHBUTTON      "20",IDC_BUTTON20,155,132,66,30
+    PUSHBUTTON      "21",IDC_BUTTON21,155,168,66,30
+    PUSHBUTTON      "22",IDC_BUTTON22,155,204,66,30
+    PUSHBUTTON      "23",IDC_BUTTON23,155,240,66,30
+    PUSHBUTTON      "24",IDC_BUTTON24,155,276,66,30
+    PUSHBUTTON      "25",IDC_BUTTON25,227,24,66,30
+    PUSHBUTTON      "26",IDC_BUTTON26,227,60,66,30
+    PUSHBUTTON      "27",IDC_BUTTON27,227,96,66,30
+    PUSHBUTTON      "28",IDC_BUTTON28,227,132,66,30
+    PUSHBUTTON      "29",IDC_BUTTON29,227,168,66,30
+    PUSHBUTTON      "30",IDC_BUTTON30,227,204,66,30
+    PUSHBUTTON      "31",IDC_BUTTON31,227,240,66,30
+    PUSHBUTTON      "32",IDC_BUTTON32,227,276,66,30
+END
+
+IDD_DIALOGSETTING DIALOGEX 0, 0, 160, 47
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "透明度"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,24,18,102,12
+    LTEXT           "背景",IDC_STATIC,6,18,17,8
+    CTEXT           "255",IDC_STATIC1,126,18,18,8,SS_CENTERIMAGE
+    CTEXT           "255",IDC_STATIC2,126,30,18,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,24,30,102,12
+    LTEXT           "层级",IDC_STATIC,6,30,17,8
+    CONTROL         "边框显示",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,6,48,10
+    CONTROL         "网格显示",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,6,48,10
+    CONTROL         "地图信息",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,102,6,48,10
+END
+
+IDD_DIALOGTREE DIALOGEX 0, 0, 148, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "地图属性"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确定",IDC_BACKOKBUTTON,12,210,50,14
+    EDITTEXT        IDC_TREEEDIT,25,174,113,14,ES_AUTOHSCROLL
+    CTEXT           "名字",IDC_TREESTATIC1,6,176,17,8
+    LTEXT           "ID",IDC_STATIC,14,194,8,8
+    COMBOBOX        IDC_TREECOMBO,25,192,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "选择背景",IDC_STATIC,6,0,138,168
+    LISTBOX         IDC_BACKLISTBOX,12,12,126,78,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "取消",IDC_BACKCANCELBUTTON,84,210,50,14
+    CONTROL         "",IDC_MAPIMAGE,"Static",SS_BLACKFRAME,12,96,126,66
+END
+
+IDD_LOAD DIALOGEX 0, 0, 186, 29
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOPMOST
+CAPTION "加载资源"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,6,6,168,14
+END
+
+IDD_DIALOGTEST DIALOGEX 0, 0, 262, 167
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "测试"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "YunHsiao"
+            VALUE "FileDescription", "像素地图编辑器"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "MapEditor.exe"
+            VALUE "OriginalFilename", "MapEditor.exe"
+            VALUE "ProductName", "Map Editor"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_DIALOGBRUSH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 338
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 314
+    END
+
+    IDD_DIALOGSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_DIALOGTREE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_LOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_DIALOGTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAPMOVE          BITMAP                  "res\\move.bmp"
+IDB_BITMAP1             BITMAP                  "res\\Map001.bmp"
+IDB_BITMAP2             BITMAP                  "res\\Map002.bmp"
+IDB_BITMAP3             BITMAP                  "res\\Map003.bmp"
+IDB_BITMAP4             BITMAP                  "res\\Map004.bmp"
+IDB_BITMAP5             BITMAP                  "res\\Map005.bmp"
+IDB_BITMAP6             BITMAP                  "res\\Map006.bmp"
+IDB_BITMAP7             BITMAP                  "res\\Map007.bmp"
+IDB_BITMAP8             BITMAP                  "res\\Map008.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR                  "res\\coll.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "MapEdit\n\nMapEdit\n\n\nMapEdit.Document\nMapEdit.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "KenneyMapEditor"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "清除选定内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制选定内容并将其放到剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切选定内容并将其放到剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "恢复上次撤消的操作\n重做"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小为图标"
+    AFX_IDS_SCMAXIMIZE      "使窗口最大化显示"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\MapEditor.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"          // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
