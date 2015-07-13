@@ -70,8 +70,8 @@ bool CMonsterSaw::TickFSM(float fElapseTime)
 						Mirror(fElapseTime);
 				}
 				if (m_vecPos.x < 0 || m_vecPos.y < 0 || 
-					m_tiles[m_iRow][m_iCol] > EBT_BlockMin
-					/*m_tiles[m_iRowFoot][m_iCol] < EBT_BlockMin*/){
+					m_tiles[m_iRow][m_iCol] > EBT_BlockMin ||
+					m_tiles[m_iRowFoot][m_iCol] < EBT_BlockMin) {
 						m_bTimeDetection = false;
 						Mirror(fElapseTime);
 				}

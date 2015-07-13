@@ -150,7 +150,7 @@
     <Element index="1" x="512" y="640"/>
     <Element index="2" x="2240" y="448"/>
     <Element index="10" x="640" y="320" switch="0"/>
-    <Element index="10" x="1472" y="128" switch="1"/>
+    <Element index="10" x="1472" y="640" switch="1"/>
     <Element index="14" x="1984" y="640"/>
     <Element index="15" x="2816" y="640"/>
     <Element index="17" x="704" y="640"/>
@@ -161,7 +161,7 @@
 
 <Trigger>
     <Element index="0" x="669" y="355" id="0"/>
-    <Element index="1" x="1500" y="157" id="1"/>
+    <Element index="1" x="1496" y="668" id="1"/>
     <Element index="1" x="91" y="412" id="1"/>
     <Element index="1" x="2905" y="929" id="1"/>
 </Trigger>
