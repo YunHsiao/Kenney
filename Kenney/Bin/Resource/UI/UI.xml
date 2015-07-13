@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HP>
+  <Element ID="4012" x="-32" y="32"/>
+  <Element ID="4013" x="-32" y="32"/>
+  <Element ID="4014" x="-32" y="32"/>
+</HP>
+
+<HEAD>
+  <Element ID="4035" x="32" y="656"/>
+  <Element ID="4034" x="32" y="656"/>
+  <Element ID="4033" x="32" y="656"/>
+  <Element ID="4032" x="32" y="656"/>
+  <Element ID="4031" x="32" y="656"/>
+</HEAD>
+
+<JEWEL_BLANK>
+  <Element ID="4022" x="512" y="32"/>
+  <Element ID="4020" x="576" y="32"/>
+  <Element ID="4018" x="640" y="32"/>
+  <Element ID="4016" x="704" y="32"/>
+</JEWEL_BLANK>
+
+<JEWEL>
+  <Element ID="4021" x="512" y="32"/>
+  <Element ID="4019" x="576" y="32"/>
+  <Element ID="4017" x="640" y="32"/>
+  <Element ID="4015" x="704" y="32"/>
+</JEWEL>
+
+<GOLD>
+  <Element ID="4011" x="976" y="32"/>
+  <Element ID="4036" x="1024" y="32"/>
+</GOLD>
+
+<NUMBER>
+  <Element ID="4001" x="1024" y="32"/>
+  <Element ID="4002" x="1024" y="32"/>
+  <Element ID="4003" x="1024" y="32"/>
+  <Element ID="4004" x="1024" y="32"/>
+  <Element ID="4005" x="1024" y="32"/>
+  <Element ID="4006" x="1024" y="32"/>
+  <Element ID="4007" x="1024" y="32"/>
+  <Element ID="4008" x="1024" y="32"/>
+  <Element ID="4009" x="1024" y="32"/>
+  <Element ID="4010" x="1024" y="32"/>
+</NUMBER>

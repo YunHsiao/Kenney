@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312" standalone="yes" ?>
+<MANGOGUI ID ='2' name="NPCTaskDialog" width ='170' height='170' Texture ="Resource\\Layout\\spritesheet.png" codex="Resource\\Layout\\default.codex">
+<Image ID="2101" x="497" y="167" z="0.51" width="286" height="386" left="857" top="137" right="943" bottom="223"/>
+<Image ID="2102" x="490" y="160" z="0.51" width="7" height="7" left="850" top="130" right="857" bottom="137"/>
+<Image ID="2103" x="783" y="160" z="0.51" width="7" height="7" left="943" top="130" right="950" bottom="137"/>
+<Image ID="2104" x="783" y="553" z="0.51" width="7" height="7" left="943" top="223" right="950" bottom="230"/>
+<Image ID="2105" x="490" y="553" z="0.51" width="7" height="7" left="850" top="223" right="857" bottom="230"/>
+<Image ID="2106" x="490" y="167" z="0.51" width="7" height="386" left="850" top="137" right="857" bottom="223"/>
+<Image ID="2107" x="497" y="160" z="0.51" width="286" height="7" left="857" top="130" right="943" bottom="137"/>
+<Image ID="2108" x="783" y="167" z="0.51" width="7" height="386" left="943" top="137" right="950" bottom="223"/>
+<Image ID="2109" x="497" y="553" z="0.51" width="286" height="7" left="857" top="223" right="943" bottom="230"/>
+
+  <Label ID='1201'  x='500' y='360' z='0.5' width ='280' height='50' Type='TextArea'></Label>
+  <Label ID='1251'  x='500' y='535' z='0.5' width ='280' height='50' Type='TextArea'></Label>
+
+  <Button ID='1301'  x='534' y='483' z='0.5' width ='80' height='39'type='1004'></Button>
+  <Button ID='1302'  x='658' y='483' z='0.5' width ='80' height='39'type='1004'></Button>
+  <Button ID='1501'  x='765' y='167' z='0.5' width ='18' height='18'type='1203'></Button>
+</MANGOGUI>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="gb2312" standalone="yes" ?>
+<MANGOGUI ID ='7' name="NPCTaskDialog" width ='170' height='170' Texture ="Resource\\Block\\spritesheet.png" codex="Resource\\Block\\default.codex">
+<Label ID='1201'  x='500' y='250' z='0.5' width ='280' height='20' Type='TextArea'>花费100金币购买人物属性</Label>
+<Label ID='1202'  x='500' y='270' z='0.5' width ='280' height='20' Type='TextArea'>点击左下角头像切换</Label>
+  <Button ID="4031" x="605" y="384" z="0.51" width="64" height="64" type="1000"/>
+  <Button ID="4032"  x="605" y="384" z="0.51" width="64" height="64" type="1001"/>
+  <Button ID="4033"  x="605" y="384" z="0.51" width="64" height="64" type="1002"/>
+  <Button ID="4034"  x="605" y="384" z="0.51" width="64" height="64" type="1003"/>
+  <Button ID="4035"  x="605" y="384" z="0.51" width="64" height="64" type="1004"/>
+</MANGOGUI>

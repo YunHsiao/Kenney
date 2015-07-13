@@ -35,7 +35,6 @@
 #include <afxcmn.h>             // MFC 对 Windows 公共控件的支持
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
-
 // 为了能查看到D3D一些细节调试信息
 #define D3D_DEBUG_INFO
 
@@ -50,7 +49,6 @@
 #include <list>
 #include <map>
 #include <sstream>
-#include <vld.h>
 
 #include "tinyxml2/tinyxml2.h"
 

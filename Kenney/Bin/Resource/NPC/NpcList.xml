@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="gb2312" standalone="yes" ?>
+<NPC>
+    <Npc mapid="0" id="3001" name="Beige" value="欢迎来到KenneyLand,我是Beige,是力量的化身!" />
+    <Npc mapid="0" id="3002" name="Blue" value="欢迎来到KenneyLand,我是Blue,我代表智慧的结晶."/>
+    <Npc mapid="0" id="3003" name="Green" value="欢迎来到KenneyLand,我是Green,愿自然带给你能量."/>
+    <Npc mapid="0" id="3004" name="Pink" value="欢迎来到KenneyLand,我是Pink,在速度中寻找真理!"/>
+    <Npc mapid="0" id="3005" name="Yellow" value="欢迎来到KenneyLand,我是Yellow,我喜欢弹跳的活力!"/>
+
+    <Npc mapid="1" id="3001" name="Beige" value="欢迎来到KenneyLand,我是Beige,是力量的化身!" />
+    <Npc mapid="1" id="3002" name="Blue" value="欢迎来到KenneyLand,我是Blue,我代表智慧的结晶."/>
+    <Npc mapid="1" id="3003" name="Green" value="欢迎来到KenneyLand,我是Green,愿自然带给你能量."/>
+    <Npc mapid="1" id="3004" name="Pink" value="欢迎来到KenneyLand,我是Pink,在速度中寻找真理!"/>
+    <Npc mapid="1" id="3005" name="Yellow" value="欢迎来到KenneyLand,我是Yellow,我喜欢弹跳的活力!"/>
+
+    <Npc mapid="2" id="3001" name="Beige" value="欢迎来到KenneyLand,我是Beige,是力量的化身!" />
+    <Npc mapid="2" id="3002" name="Blue" value="欢迎来到KenneyLand,我是Blue,我代表智慧的结晶."/>
+    <Npc mapid="2" id="3003" name="Green" value="欢迎来到KenneyLand,我是Green,愿自然带给你能量."/>
+    <Npc mapid="2" id="3004" name="Pink" value="欢迎来到KenneyLand,我是Pink,在速度中寻找真理!"/>
+    <Npc mapid="2" id="3005" name="Yellow" value="欢迎来到KenneyLand,我是Yellow,我喜欢弹跳的活力!"/>
+
+    <Npc mapid="3" id="3001" name="Beige" value="欢迎来到KenneyLand,我是Beige,是力量的化身!" />
+    <Npc mapid="3" id="3002" name="Blue" value="欢迎来到KenneyLand,我是Blue,我代表智慧的结晶."/>
+    <Npc mapid="3" id="3003" name="Green" value="欢迎来到KenneyLand,我是Green,愿自然带给你能量."/>
+    <Npc mapid="3" id="3004" name="Pink" value="欢迎来到KenneyLand,我是Pink,在速度中寻找真理!"/>
+    <Npc mapid="3" id="3005" name="Yellow" value="欢迎来到KenneyLand,我是Yellow,我喜欢弹跳的活力!"/>
+
+    <Npc mapid="4" id="3001" name="Beige" value="欢迎来到KenneyLand,我是Beige,是力量的化身!" />
+    <Npc mapid="4" id="3002" name="Blue" value="欢迎来到KenneyLand,我是Blue,我代表智慧的结晶."/>
+    <Npc mapid="4" id="3003" name="Green" value="欢迎来到KenneyLand,我是Green,愿自然带给你能量."/>
+    <Npc mapid="4" id="3004" name="Pink" value="欢迎来到KenneyLand,我是Pink,在速度中寻找真理!"/>
+    <Npc mapid="4" id="3005" name="Yellow" value="欢迎来到KenneyLand,我是Yellow,我喜欢弹跳的活力!"/>
+
+    <Npc mapid="5" id="3001" name="Beige" value="欢迎来到KenneyLand,我是Beige,是力量的化身!" />
+    <Npc mapid="5" id="3002" name="Blue" value="欢迎来到KenneyLand,我是Blue,我代表智慧的结晶."/>
+    <Npc mapid="5" id="3003" name="Green" value="欢迎来到KenneyLand,我是Green,愿自然带给你能量."/>
+    <Npc mapid="5" id="3004" name="Pink" value="欢迎来到KenneyLand,我是Pink,在速度中寻找真理!"/>
+    <Npc mapid="5" id="3005" name="Yellow" value="欢迎来到KenneyLand,我是Yellow,我喜欢弹跳的活力!"/>
+</NPC>

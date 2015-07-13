@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TASKSYSTEM>
+    <Task ID="2" Name="收集宝石" TaskType="2">
+        <ProvideNpcID FromMapID="1">3003</ProvideNpcID>
+        <RegainNpcID FromMapID="1">3003</RegainNpcID>
+        <ItemsID FromMapID="1" Count="4">0</ItemsID>
+        <Info>你能收集齐这张地图的所有宝石吗？</Info>
+        <Receipt>加油~</Receipt>
+        <Accept>当然可以</Accept>
+        <Refuse>我找不到...</Refuse>
+        <Repeat>还没有找到吗？</Repeat>
+        <Unfinished>加油~</Unfinished>
+        <Finished>恭喜你~</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+    <Task ID="3" Name="收集金币" TaskType="2">
+        <ProvideNpcID FromMapID="1">3004</ProvideNpcID>
+        <RegainNpcID FromMapID="1">3004</RegainNpcID>
+        <ItemsID FromMapID="0" Count="100">0</ItemsID>
+        <Info>你能为我收集100个金币吗？</Info>
+        <Receipt>谢谢你~</Receipt>
+        <Accept>这简单</Accept>
+        <Refuse>不行...</Refuse>
+        <Repeat>快去吧~</Repeat>
+        <Unfinished>加油~</Unfinished>
+        <Finished>你真好，请收下这100个金币作为小礼~</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+</TASKSYSTEM>

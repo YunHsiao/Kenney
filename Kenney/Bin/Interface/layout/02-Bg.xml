@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="gb2312" standalone="yes" ?>
-<MANGOGUI ID ='2' name="bg" x='0' y='0' width ='800' height='600' Texture ="./interface/Resouce/bg.jpg">
-  <Image  ID='2101'  x='0' y='0' z='1' width ='800' height= '600' left='0' top='0' right='800' bottom='600'/>
-</MANGOGUI>

@@ -1,119 +1,112 @@
 #include "stdafx.h"
 #include "SceneManager.h"
+#include "Scene.h"
+#include "ResourceManager.h"
+#include "Controller.h"
+#include "GUI.h"
+#include "NPCDialog.h"
+#include "TaskDialog.h"
+#include "ShopDialog.h"
+#include "Goods.h"
+#include "TaskManager.h"
 
 CSceneManager CSceneManager::s_sm;
 
 CSceneManager::CSceneManager()
+:m_pD3DDevice(NULL)
+,m_pSprite(NULL)
+,m_pSceneManager(NULL)
+,m_pTexture(NULL)
 {
 
 }
 
 CSceneManager::~CSceneManager() 
 {
-
+	Destroy();
 }
 
-void CSceneManager::Tick(FLOAT fElapsedTime) {
+void CSceneManager::Destroy()
+{
+	//Clear();
 
+	// 释放D3D相关资源
+	CResourceManager::GetIntance()->Destroy();
+	CScene::GetInstance()->Destroy();
+	SAFE_RELEASE(m_pSprite);
+	SAFE_RELEASE(m_pLine);
+	m_pSceneManager = NULL;
+	m_pSprite = NULL;
+	m_pD3DDevice = NULL;
 }
-//
-//CWorld CWorld::s_World;
-//
-//CWorld::CWorld():
-//m_pD3DDevice(NULL),
-//m_pSprite(NULL),
-//m_pSceneManager(NULL),
-//
-//m_iCurMapID(-1),
-//m_fTriggerCheckTime(0.f),
-//
-////m_iMapRow(0),
-////m_iMapCol(0),
-////m_pMapData(NULL),
-//
-//m_pBrushElement(NULL),
-//m_pTriggerElment(NULL)
-//
-////m_pPlayer(NULL),
-////m_pNPCManager(NULL),
-////m_pMonsterManager(NULL),
-////m_pTaskManager(NULL),
-////m_pItemManager(NULL)
-//{
-//}
-//
-//CWorld::~CWorld()
-//{
-//	Destroy();
-//}
-//
-//void CWorld::Destroy()
-//{
-//	Clear();
-//
-//	//// 删除玩家
-//	//SAFE_DELETE(m_pPlayer)
-//
-//	//// 删除NPC管理器
-//	//SAFE_DELETE(m_pNPCManager)
-//
-//	//// 删除Monster管理器
-//	//SAFE_DELETE(m_pMonsterManager)
-//
-//	//// 删除TaskManager
-//	//SAFE_DELETE(m_pTaskManager)
-//
-//	//// 删除任务管理器
-//	//SAFE_DELETE(m_pItemManager)
-//
-//	// 释放D3D相关资源
-//	SAFE_RELEASE(m_pSprite)
-//	m_pD3DDevice = NULL;
-//	m_pSceneManager = NULL;
-//}
-//
-//void CWorld::Clear()
-//{
-//	// 清空NPC
-//	//if (NULL != m_pNPCManager)
-//	//	m_pNPCManager->Clear();
-//
-//	// 清空Monster
-//	//if (NULL != m_pMonsterManager)
-//	//	m_pMonsterManager->Clear();
-//
-//	//SAFE_DELETE_ARRAY(m_pMapData)
-//}
-//
-//void CWorld::Initialize(LPDIRECT3DDEVICE9 pD3DDevice, CMANGOSceneManager* pSceneManager)
-//{
-//	m_pD3DDevice = pD3DDevice;
-//	m_pSceneManager = pSceneManager;
-//
-//	// 创建绘制精灵
-//	HRESULT hr;
-//	V(D3DXCreateSprite(m_pD3DDevice, &m_pSprite))
-//
-//	//// 创建物品管理器
-//	//m_pItemManager = new CItemManager;
-//	//m_pItemManager->Initialize();
-//
-//	//// 创建玩家
-//	//m_pPlayer = new CPlayer;
-//	//m_pPlayer->Initialize(m_pD3DDevice, m_pSprite, pSceneManager);
-//	//m_pPlayer->SetPosition(260, 50);
-//
-//	//// 创建NPC管理器
-//	//m_pNPCManager = new CNPCManager;
-//
-//	//// 创建Monster管理器
-//	//m_pMonsterManager = new CMonsterManager;
-//
-//	//// 创建任务管理器
-//	//m_pTaskManager = new CTaskManager;
-//	//m_pTaskManager->Initialize(pSceneManager);
-//}
-//
+
+void CSceneManager::Clear()
+{
+	//SAFE_DELETE_ARRAY(m_pBrushElement)
+}
+
+bool CSceneManager::Initialize(LPDIRECT3DDEVICE9 pD3DDevice, CMANGOSceneManager* pSceneManager)
+{
+	m_pD3DDevice = pD3DDevice;
+	m_pSceneManager = pSceneManager;
+
+	// 创建绘制精灵
+	HRESULT hr;
+	if (FAILED(hr = D3DXCreateSprite(m_pD3DDevice, &m_pSprite))) return false;
+	if (FAILED(hr = D3DXCreateLine(m_pD3DDevice, &m_pLine))) return false;
+
+	if (!CResourceManager::GetIntance()->Initialize("Resource/Block/spritesheet.png", "Resource/Block/spritesheet.xml", "Resource/Background/background.xml"))
+		return false;
+
+	m_pTexture = CResourceManager::GetIntance()->GetAtlas();
+
+	// 初始化场景
+	if (!CScene::GetInstance()->Initialize(m_pSprite, m_pTexture, m_pSceneManager, m_pLine))
+		return false;
+
+	if (!CGUI::GetInstance()->Initialize(m_pSprite, m_pTexture))
+		return false;
+
+	if(!CNPCDialog::GetInstance()->Init(m_pSceneManager)) 
+		return false;
+
+	if(!CTaskDialog::GetInstance()->Init(m_pSceneManager)) 
+		return false;
+
+	if(!CShopDialog::GetInstance()->Init(m_pSceneManager)) 
+		return false;
+
+	if (!CGoods::GetInstance()->Init(m_pSceneManager))
+		return false;
+
+	if(!CTaskManager::GetInstance()->Init())
+		return false;
+
+	return true;
+}
+
+void CSceneManager::Tick(float fElapsedTime) 
+{
+	CScene::GetInstance()->Tick(fElapsedTime);
+}
+
+void CSceneManager::Render() 
+{
+	// Render总入口
+	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);
+
+	CScene::GetInstance()->Render();
+
+	m_pSprite->End();
+}
+
+
+LRESULT CSceneManager::MsgProc(HWND hWnd, unsigned int uMsg, WPARAM wParam, LPARAM lParam)
+{
+	
+	return 1;
+}
+
 ////void CWorld::EnterScene(const char* filename)
 ////{
 //	//tinyxml2::XMLDocument pDoc;
@@ -223,12 +216,4 @@ void CSceneManager::Tick(FLOAT fElapsedTime) {
 //	//	return true;
 //
 //	//return false;
-////}
-//
-////LRESULT CWorld::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-////{
-//	//if (NULL == m_pPlayer)
-//	//	return 0;
-//
-//	//return m_pPlayer->MsgProc(hWnd, uMsg, wParam, lParam);
 ////}

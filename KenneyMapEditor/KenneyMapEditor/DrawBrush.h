@@ -21,7 +21,8 @@ public:   // 内联函数
 	inline INT   GetTextureMaxNum(){ return m_nMaxNum; }
 	inline INT   GetTextureWidth() { return m_pCurWidth[m_nCurNum];  }
 	inline INT   GetTextureHeight() { return m_pCurHeight[m_nCurNum]; }
-	inline LPDIRECT3DTEXTURE9* GetTexturePoint(){ return m_ppTexture;}
+	inline LPDIRECT3DTEXTURE9* GetTexturePoint(){ return m_ppTexture; }
+	inline bool IsValid() { return m_nCurNum >= 0 && m_nCurNum < m_nMaxNum; }
 	// 给触发块用的
 	inline void SetSelectState(BOOL bIsSel)
 	{

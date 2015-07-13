@@ -1,6 +1,8 @@
-#pragma once
+#ifndef KENNEY_SCENEMANAGER
+#define KENNEY_SCENEMANAGER
 
-class CSceneManager {
+class CSceneManager 
+{
 
 private:
 	CSceneManager();
@@ -10,20 +12,32 @@ public:
 	static CSceneManager* GetIntance() { return &s_sm; }
 
 public:
-	BOOL Initialize(LPDIRECT3DDEVICE9 pD3DDevice, CMANGOSceneManager* pSceneManager);
-	void Tick(FLOAT fElapsedTime);
+	bool Initialize(LPDIRECT3DDEVICE9 pD3DDevice, CMANGOSceneManager* pSceneManager);
+	void Tick(float fElapsedTime);
 	void Render();
+	LRESULT MsgProc(HWND hWnd, unsigned int uMsg, WPARAM wParam, LPARAM lParam);
+
 	inline CMANGOSceneManager* GetSceneManager() { return m_pSceneManager; }
+	inline LPDIRECT3DDEVICE9 GetDevice() { return m_pD3DDevice; }
+
+	void Destroy();
 
 private:
+	void Clear();
+
+private:
+	LPD3DXLINE m_pLine;
 	LPDIRECT3DDEVICE9 m_pD3DDevice;
 	LPD3DXSPRITE m_pSprite;
 	CMANGOSceneManager* m_pSceneManager;
+	LPDIRECT3DTEXTURE9 m_pTexture;
 
 private:
 	static CSceneManager s_sm;
 
 };
+
+#endif
 
 //#define WORLD_GRID_DISTANCE 64
 //
@@ -42,7 +56,7 @@ private:
 //
 //	struct MapElement
 //	{
-//		INT id, x, y, tid;
+//		int id, x, y, tid;
 //		RECT rect;
 //	};
 //
@@ -57,18 +71,18 @@ private:
 //	void Initialize(LPDIRECT3DDEVICE9 pD3DDevice, CMANGOSceneManager* pSceneManager);
 //	void Destroy();
 //
-//	void EnterScene(const CHAR* filename);
-//	void ChangeScene(INT iTriggerID);
+//	void EnterScene(const char* filename);
+//	void ChangeScene(int iTriggerID);
 //
-//	bool Tick(FLOAT fElapsedTime);
+//	bool Tick(float fElapsedTime);
 //
 //	void Render();
 //
-//	LRESULT MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+//	LRESULT MsgProc(HWND hWnd, unsigned int uMsg, WPARAM wParam, LPARAM lParam);
 //
-//	//inline INT GetCurrentMapID() { return m_iCurMapID; }
-//	//inline INT GetWorldRow() { return m_iMapRow; }
-//	//inline INT GetWorldCol() { return m_iMapCol; }
+//	//inline int GetCurrentMapID() { return m_iCurMapID; }
+//	//inline int GetWorldRow() { return m_iMapRow; }
+//	//inline int GetWorldCol() { return m_iMapCol; }
 //	//inline DWORD* GetWorldData() { return m_pMapData; }
 //
 //	//inline CMANGOSceneManager* GetSceneManager() { return m_pSceneManager; }

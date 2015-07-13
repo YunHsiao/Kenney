@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <Map>
+	<Backdrop id = "1000" Path="Resource/Background/logo.png"/>
+	<Backdrop id = "1001" Path="Resource/Background/map001.png"/>
+	<Backdrop id = "1002" Path="Resource/Background/map002.png"/>
+	<Backdrop id = "1003" Path="Resource/Background/map003.png"/>
+	<Backdrop id = "1004" Path="Resource/Background/map004.png"/>
+	<Backdrop id = "1005" Path="Resource/Background/map005.png"/>
+	<Backdrop id = "1006" Path="Resource/Background/map006.png"/>
+	<Backdrop id = "1007" Path="Resource/Background/map007.png"/>
+	<Backdrop id = "1008" Path="Resource/Background/map008.png"/>
+ </Map>

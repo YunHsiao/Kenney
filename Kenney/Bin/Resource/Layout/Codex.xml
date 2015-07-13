@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TexRECT id="blue_boxCheckmark.png" Left="976" Top="10" Right="1014" Bottom="46"/>
+
+<TexRECT id="blue_boxCross.png" Left="976" Top="66" Right="1014" Bottom="102"/>
+
+<TexRECT id="blue_boxTick.png" Left="568" Top="856" Right="604" Bottom="892"/>
+
+<TexRECT id="blue_button00.png" Left="436" Top="10" Right="626" Bottom="59"/>
+
+<TexRECT id="blue_button01.png" Left="10" Top="424" Right="200" Bottom="469"/>
+
+<TexRECT id="blue_button02.png" Left="646" Top="10" Right="836" Bottom="59"/>
+
+<TexRECT id="blue_button03.png" Left="220" Top="424" Right="410" Bottom="469"/>
+
+<TexRECT id="blue_button04.png" Left="10" Top="79" Right="200" Bottom="128"/>
+
+<TexRECT id="blue_button05.png" Left="430" Top="475" Right="620" Bottom="520"/>
+
+<TexRECT id="blue_button06.png" Left="670" Top="355" Right="719" Bottom="404"/>
+
+<TexRECT id="blue_button07.png" Left="739" Top="355" Right="788" Bottom="404"/>
+
+<TexRECT id="blue_button08.png" Left="778" Top="646" Right="827" Bottom="691"/>
+
+<TexRECT id="blue_button09.png" Left="670" Top="424" Right="719" Bottom="473"/>
+
+<TexRECT id="blue_button10.png" Left="847" Top="646" Right="896" Bottom="691"/>
+
+<TexRECT id="blue_button11.png" Left="739" Top="424" Right="788" Bottom="473"/>
+
+<TexRECT id="blue_button12.png" Left="916" Top="652" Right="965" Bottom="697"/>
+
+<TexRECT id="blue_button13.png" Left="220" Top="79" Right="410" Bottom="128"/>
+
+<TexRECT id="blue_checkmark.png" Left="736" Top="906" Right="757" Bottom="926"/>
+
+<TexRECT id="blue_circle.png" Left="684" Top="830" Right="720" Bottom="866"/>
+
+<TexRECT id="blue_cross.png" Left="740" Top="830" Right="758" Bottom="848"/>
+
+<TexRECT id="blue_panel.png" Left="856" Top="10" Right="956" Bottom="110"/>
+
+<TexRECT id="blue_sliderDown.png" Left="985" Top="583" Right="1013" Bottom="625"/>
+
+<TexRECT id="blue_sliderLeft.png" Left="220" Top="817" Right="259" Bottom="848"/>
+
+<TexRECT id="blue_sliderRight.png" Left="279" Top="817" Right="318" Bottom="848"/>
+
+<TexRECT id="blue_sliderUp.png" Left="985" Top="645" Right="1013" Bottom="687"/>
+
+<TexRECT id="blue_tick.png" Left="10" Top="966" Right="27" Bottom="983"/>
+
+<TexRECT id="dropdownBottom.png" Left="10" Top="749" Right="200" Bottom="773"/>
+
+<TexRECT id="dropdownMid.png" Left="220" Top="749" Right="410" Bottom="773"/>
+
+<TexRECT id="dropdownTop.png" Left="10" Top="793" Right="200" Bottom="817"/>
+
+<TexRECT id="green_boxCheckmark.png" Left="976" Top="122" Right="1014" Bottom="158"/>
+
+<TexRECT id="green_boxCross.png" Left="970" Top="178" Right="1008" Bottom="214"/>
+
+<TexRECT id="green_boxTick.png" Left="778" Top="841" Right="814" Bottom="877"/>
+
+<TexRECT id="green_button00.png" Left="430" Top="79" Right="620" Bottom="128"/>
+
+<TexRECT id="green_button01.png" Left="10" Top="489" Right="200" Bottom="534"/>
+
+<TexRECT id="green_button02.png" Left="640" Top="79" Right="830" Bottom="128"/>
+
+<TexRECT id="green_button03.png" Left="220" Top="489" Right="410" Bottom="534"/>
+
+<TexRECT id="green_button04.png" Left="10" Top="148" Right="200" Bottom="197"/>
+
+<TexRECT id="green_button05.png" Left="430" Top="540" Right="620" Bottom="585"/>
+
+<TexRECT id="green_button06.png" Left="832" Top="370" Right="881" Bottom="419"/>
+
+<TexRECT id="green_button07.png" Left="901" Top="370" Right="950" Bottom="419"/>
+
+<TexRECT id="green_button08.png" Left="640" Top="700" Right="689" Bottom="745"/>
+
+<TexRECT id="green_button09.png" Left="832" Top="439" Right="881" Bottom="488"/>
+
+<TexRECT id="green_button10.png" Left="709" Top="700" Right="758" Bottom="745"/>
+
+<TexRECT id="green_button11.png" Left="901" Top="439" Right="950" Bottom="488"/>
+
+<TexRECT id="green_button12.png" Left="778" Top="711" Right="827" Bottom="756"/>
+
+<TexRECT id="green_button13.png" Left="220" Top="148" Right="410" Bottom="197"/>
+
+<TexRECT id="green_checkmark.png" Left="836" Top="953" Right="857" Bottom="973"/>
+
+<TexRECT id="green_circle.png" Left="834" Top="841" Right="870" Bottom="877"/>
+
+<TexRECT id="green_cross.png" Left="740" Top="868" Right="758" Bottom="886"/>
+
+<TexRECT id="green_panel.png" Left="850" Top="130" Right="950" Bottom="230"/>
+
+<TexRECT id="green_sliderDown.png" Left="985" Top="707" Right="1013" Bottom="749"/>
+
+<TexRECT id="green_sliderLeft.png" Left="338" Top="817" Right="377" Bottom="848"/>
+
+<TexRECT id="green_sliderRight.png" Left="397" Top="865" Right="436" Bottom="896"/>
+
+<TexRECT id="green_sliderUp.png" Left="985" Top="769" Right="1013" Bottom="811"/>
+
+<TexRECT id="green_tick.png" Left="121" Top="837" Right="138" Bottom="854"/>
+
+<TexRECT id="grey_arrowDownGrey.png" Left="777" Top="1004" Right="792" Bottom="1014"/>
+
+<TexRECT id="grey_arrowDownWhite.png" Left="936" Top="1001" Right="951" Bottom="1011"/>
+
+<TexRECT id="grey_arrowUpGrey.png" Left="10" Top="1004" Right="25" Bottom="1014"/>
+
+<TexRECT id="grey_arrowUpWhite.png" Left="45" Top="1004" Right="60" Bottom="1014"/>
+
+<TexRECT id="grey_box.png" Left="970" Top="234" Right="1008" Bottom="270"/>
+
+<TexRECT id="grey_boxCheckmark.png" Left="970" Top="290" Right="1008" Bottom="326"/>
+
+<TexRECT id="grey_boxCross.png" Left="970" Top="346" Right="1008" Bottom="382"/>
+
+<TexRECT id="grey_boxTick.png" Left="624" Top="886" Right="660" Bottom="922"/>
+
+<TexRECT id="grey_button00.png" Left="10" Top="554" Right="200" Bottom="599"/>
+
+<TexRECT id="grey_button01.png" Left="430" Top="148" Right="620" Bottom="197"/>
+
+<TexRECT id="grey_button02.png" Left="220" Top="554" Right="410" Bottom="599"/>
+
+<TexRECT id="grey_button03.png" Left="640" Top="148" Right="830" Bottom="197"/>
+
+<TexRECT id="grey_button04.png" Left="430" Top="605" Right="620" Bottom="650"/>
+
+<TexRECT id="grey_button05.png" Left="10" Top="10" Right="205" Bottom="59"/>
+
+<TexRECT id="grey_button06.png" Left="225" Top="10" Right="416" Bottom="59"/>
+
+<TexRECT id="grey_button07.png" Left="668" Top="493" Right="717" Bottom="542"/>
+
+<TexRECT id="grey_button08.png" Left="737" Top="493" Right="786" Bottom="542"/>
+
+<TexRECT id="grey_button09.png" Left="847" Top="711" Right="896" Bottom="756"/>
+
+<TexRECT id="grey_button10.png" Left="806" Top="508" Right="855" Bottom="557"/>
+
+<TexRECT id="grey_button11.png" Left="916" Top="717" Right="965" Bottom="762"/>
+
+<TexRECT id="grey_button12.png" Left="875" Top="508" Right="924" Bottom="557"/>
+
+<TexRECT id="grey_button13.png" Left="640" Top="765" Right="689" Bottom="810"/>
+
+<TexRECT id="grey_button14.png" Left="10" Top="217" Right="200" Bottom="266"/>
+
+<TexRECT id="grey_button15.png" Left="220" Top="217" Right="410" Bottom="266"/>
+
+<TexRECT id="grey_checkmarkGrey.png" Left="836" Top="993" Right="857" Bottom="1013"/>
+
+<TexRECT id="grey_checkmarkWhite.png" Left="936" Top="961" Right="957" Bottom="981"/>
+
+<TexRECT id="grey_circle.png" Left="680" Top="886" Right="716" Bottom="922"/>
+
+<TexRECT id="grey_crossGrey.png" Left="946" Top="847" Right="964" Bottom="865"/>
+
+<TexRECT id="grey_crossWhite.png" Left="946" Top="885" Right="964" Bottom="903"/>
+
+<TexRECT id="grey_panel.png" Left="850" Top="250" Right="950" Bottom="350"/>
+
+<TexRECT id="grey_sliderDown.png" Left="985" Top="831" Right="1013" Bottom="873"/>
+
+<TexRECT id="grey_sliderEnd.png" Left="640" Top="475" Right="648" Bottom="485"/>
+
+<TexRECT id="grey_sliderHorizontal.png" Left="220" Top="793" Right="410" Bottom="797"/>
+
+<TexRECT id="grey_sliderLeft.png" Left="456" Top="865" Right="495" Bottom="896"/>
+
+<TexRECT id="grey_sliderRight.png" Left="563" Top="912" Right="602" Bottom="943"/>
+
+<TexRECT id="grey_sliderUp.png" Left="984" Top="893" Right="1012" Bottom="935"/>
+
+<TexRECT id="grey_sliderVertical.png" Left="808" Top="355" Right="812" Bottom="455"/>
+
+<TexRECT id="grey_tickGrey.png" Left="69" Top="837" Right="86" Bottom="854"/>
+
+<TexRECT id="grey_tickWhite.png" Left="158" Top="837" Right="175" Bottom="854"/>
+
+<TexRECT id="red_boxCheckmark.png" Left="970" Top="402" Right="1008" Bottom="438"/>
+
+<TexRECT id="red_boxCross.png" Left="970" Top="458" Right="1008" Bottom="494"/>
+
+<TexRECT id="red_boxTick.png" Left="890" Top="847" Right="926" Bottom="883"/>
+
+<TexRECT id="red_button00.png" Left="10" Top="619" Right="200" Bottom="664"/>
+
+<TexRECT id="red_button01.png" Left="430" Top="217" Right="620" Bottom="266"/>
+
+<TexRECT id="red_button02.png" Left="220" Top="619" Right="410" Bottom="664"/>
+
+<TexRECT id="red_button03.png" Left="944" Top="514" Right="993" Bottom="563"/>
+
+<TexRECT id="red_button04.png" Left="640" Top="562" Right="689" Bottom="611"/>
+
+<TexRECT id="red_button05.png" Left="709" Top="765" Right="758" Bottom="810"/>
+
+<TexRECT id="red_button06.png" Left="709" Top="562" Right="758" Bottom="611"/>
+
+<TexRECT id="red_button07.png" Left="778" Top="776" Right="827" Bottom="821"/>
+
+<TexRECT id="red_button08.png" Left="778" Top="577" Right="827" Bottom="626"/>
+
+<TexRECT id="red_button09.png" Left="847" Top="776" Right="896" Bottom="821"/>
+
+<TexRECT id="red_button10.png" Left="640" Top="217" Right="830" Bottom="266"/>
+
+<TexRECT id="red_button11.png" Left="10" Top="286" Right="200" Bottom="335"/>
+
+<TexRECT id="red_button12.png" Left="430" Top="670" Right="620" Bottom="715"/>
+
+<TexRECT id="red_button13.png" Left="220" Top="286" Right="410" Bottom="335"/>
+
+<TexRECT id="red_checkmark.png" Left="80" Top="993" Right="101" Bottom="1013"/>
+
+<TexRECT id="red_circle.png" Left="778" Top="897" Right="814" Bottom="933"/>
+
+<TexRECT id="red_cross.png" Left="946" Top="923" Right="964" Bottom="941"/>
+
+<TexRECT id="red_panel.png" Left="430" Top="355" Right="530" Bottom="455"/>
+
+<TexRECT id="red_sliderDown.png" Left="984" Top="955" Right="1012" Bottom="997"/>
+
+<TexRECT id="red_sliderLeft.png" Left="622" Top="942" Right="661" Bottom="973"/>
+
+<TexRECT id="red_sliderRight.png" Left="777" Top="953" Right="816" Bottom="984"/>
+
+<TexRECT id="red_sliderUp.png" Left="515" Top="865" Right="543" Bottom="907"/>
+
+<TexRECT id="red_tick.png" Left="121" Top="993" Right="138" Bottom="1010"/>
+
+<TexRECT id="yellow_boxCheckmark.png" Left="568" Top="800" Right="606" Bottom="836"/>
+
+<TexRECT id="yellow_boxCross.png" Left="626" Top="830" Right="664" Bottom="866"/>
+
+<TexRECT id="yellow_boxTick.png" Left="834" Top="897" Right="870" Bottom="933"/>
+
+<TexRECT id="yellow_button00.png" Left="430" Top="286" Right="620" Bottom="335"/>
+
+<TexRECT id="yellow_button01.png" Left="10" Top="684" Right="200" Bottom="729"/>
+
+<TexRECT id="yellow_button02.png" Left="640" Top="286" Right="830" Bottom="335"/>
+
+<TexRECT id="yellow_button03.png" Left="220" Top="684" Right="410" Bottom="729"/>
+
+<TexRECT id="yellow_button04.png" Left="10" Top="355" Right="200" Bottom="404"/>
+
+<TexRECT id="yellow_button05.png" Left="430" Top="735" Right="620" Bottom="780"/>
+
+<TexRECT id="yellow_button06.png" Left="847" Top="577" Right="896" Bottom="626"/>
+
+<TexRECT id="yellow_button07.png" Left="916" Top="583" Right="965" Bottom="632"/>
+
+<TexRECT id="yellow_button08.png" Left="916" Top="782" Right="965" Bottom="827"/>
+
+<TexRECT id="yellow_button09.png" Left="640" Top="631" Right="689" Bottom="680"/>
+
+<TexRECT id="yellow_button10.png" Left="430" Top="800" Right="479" Bottom="845"/>
+
+<TexRECT id="yellow_button11.png" Left="709" Top="631" Right="758" Bottom="680"/>
+
+<TexRECT id="yellow_button12.png" Left="499" Top="800" Right="548" Bottom="845"/>
+
+<TexRECT id="yellow_button13.png" Left="220" Top="355" Right="410" Bottom="404"/>
+
+<TexRECT id="yellow_checkmark.png" Left="10" Top="888" Right="31" Bottom="908"/>
+
+<TexRECT id="yellow_circle.png" Left="890" Top="903" Right="926" Bottom="939"/>
+
+<TexRECT id="yellow_cross.png" Left="10" Top="928" Right="28" Bottom="946"/>
+
+<TexRECT id="yellow_panel.png" Left="550" Top="355" Right="650" Bottom="455"/>
+
+<TexRECT id="yellow_sliderDown.png" Left="681" Top="942" Right="709" Bottom="984"/>
+
+<TexRECT id="yellow_sliderLeft.png" Left="877" Top="959" Right="916" Bottom="990"/>
+
+<TexRECT id="yellow_sliderRight.png" Left="10" Top="837" Right="49" Bottom="868"/>
+
+<TexRECT id="yellow_sliderUp.png" Left="729" Top="946" Right="757" Bottom="988"/>
+
+<TexRECT id="yellow_tick.png" Left="158" Top="993" Right="175" Bottom="1010"/>

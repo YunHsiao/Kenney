@@ -755,7 +755,7 @@ void CMANGOScene::OnMouseMove( POINT pt )
 
 
 //--------------------------------------------------------------------------------------
-HRESULT CMANGOScene::SetDefaultElement( UINT nControlType, UINT iElement, CMANGOElement* pElement )
+HRESULT CMANGOScene::SetDefaultElement( UINT nControlType, UINT iElement, CMANGOElement* pElement, int type )
 {
 	// If this Element type already exist in the list, simply update the stored Element
 	for( int i=0; i < m_DefaultElements.GetSize(); i++ )
@@ -763,7 +763,8 @@ HRESULT CMANGOScene::SetDefaultElement( UINT nControlType, UINT iElement, CMANGO
 		MANGOElementHolder* pElementHolder = m_DefaultElements.GetAt( i );
 
 		if( pElementHolder->nControlType == nControlType &&
-			pElementHolder->iElement == iElement )
+			pElementHolder->iElement == iElement &&
+			pElementHolder->nResourceType == type )
 		{
 			pElementHolder->Element = *pElement;
 			return S_OK;
@@ -778,6 +779,7 @@ HRESULT CMANGOScene::SetDefaultElement( UINT nControlType, UINT iElement, CMANGO
 
 	pNewHolder->nControlType = nControlType;
 	pNewHolder->iElement = iElement;
+	pNewHolder->nResourceType = type;
 	pNewHolder->Element = *pElement;
 
 	m_DefaultElements.Add( pNewHolder );
@@ -786,14 +788,15 @@ HRESULT CMANGOScene::SetDefaultElement( UINT nControlType, UINT iElement, CMANGO
 
 
 //--------------------------------------------------------------------------------------
-CMANGOElement* CMANGOScene::GetDefaultElement( UINT nControlType, UINT iElement )
+CMANGOElement* CMANGOScene::GetDefaultElement( UINT nControlType, UINT iElement, int type )
 {
 	for( int i=0; i < m_DefaultElements.GetSize(); i++ )
 	{
 		MANGOElementHolder* pElementHolder = m_DefaultElements.GetAt( i );
 
 		if( pElementHolder->nControlType == nControlType &&
-			pElementHolder->iElement == iElement )
+			pElementHolder->iElement == iElement &&
+			pElementHolder->nResourceType == type )
 		{
 			return &pElementHolder->Element;
 		}
@@ -858,7 +861,7 @@ HRESULT CMANGOScene::AddLable( int ID, LPCWSTR strText, int x, int y, int width,
 
 
 //--------------------------------------------------------------------------------------
-HRESULT CMANGOScene::AddButton( int ID, LPCWSTR strText, int x, int y, int width, int height, float z,UINT nHotkey, bool bIsDefault, CMANGOButton** ppCreated )
+HRESULT CMANGOScene::AddButton( int ID, LPCWSTR strText, int x, int y, int width, int height, float z, int type, UINT nHotkey, bool bIsDefault, CMANGOButton** ppCreated )
 {
 	HRESULT hr = S_OK;
 
@@ -870,7 +873,7 @@ HRESULT CMANGOScene::AddButton( int ID, LPCWSTR strText, int x, int y, int width
 	if( pButton == NULL )
 		return E_OUTOFMEMORY;
 	
-	hr = AddControl( pButton );
+	hr = AddControl( pButton, type );
 	if( FAILED(hr) )
 		return hr;
 
@@ -1134,7 +1137,7 @@ HRESULT CMANGOScene::AddScrollBar( int ID, int x, int y, int width, int height ,
 }
 
 //--------------------------------------------------------------------------------------
-HRESULT CMANGOScene::InitControl( CMANGOControl* pControl )
+HRESULT CMANGOScene::InitControl( CMANGOControl* pControl, int type )
 {
 	HRESULT hr;
 
@@ -1147,7 +1150,8 @@ HRESULT CMANGOScene::InitControl( CMANGOControl* pControl )
 	for( int i=0; i < m_DefaultElements.GetSize(); i++ )
 	{
 		MANGOElementHolder* pElementHolder = m_DefaultElements.GetAt( i );
-		if( pElementHolder->nControlType == pControl->GetType() )
+		if( pElementHolder->nControlType == pControl->GetType() 
+			&& pElementHolder->nResourceType == type )
 			pControl->SetElement( pElementHolder->iElement, &pElementHolder->Element );
 	}
 
@@ -1158,11 +1162,11 @@ HRESULT CMANGOScene::InitControl( CMANGOControl* pControl )
 
 
 //--------------------------------------------------------------------------------------
-HRESULT CMANGOScene::AddControl( CMANGOControl* pControl )
+HRESULT CMANGOScene::AddControl( CMANGOControl* pControl, int type )
 {
 	HRESULT hr = S_OK;
 
-	hr = InitControl( pControl );
+	hr = InitControl( pControl, type );
 	if( FAILED(hr) )
 		return DXTRACE_ERR( L"CMANGOScene::InitControl", hr );
 
@@ -1849,10 +1853,15 @@ void CMANGOScene::InitDefaultElements(char * strName )
 
 				for(tinyxml2::XMLElement* ptempobject=pRoot->FirstChildElement();ptempobject;ptempobject = ptempobject->NextSiblingElement())
 				{
+					int type(0);
 					if(!strcmp(ptempobject->Value(),"ButtonNormal"))
 					{
-						for(tinyxml2::XMLElement* ptempElement =ptempobject->FirstChildElement();ptempElement;ptempElement = ptempElement->NextSiblingElement())
+						for(tinyxml2::XMLElement* ptempAttr=ptempobject->FirstChildElement();ptempAttr;ptempAttr = ptempAttr->NextSiblingElement())
 						{
+							if(ptempAttr->Attribute("Type"))
+								type= (atoi(ptempAttr->Attribute("Type")));
+							for(tinyxml2::XMLElement* ptempElement=ptempAttr->FirstChildElement();ptempElement;ptempElement = ptempElement->NextSiblingElement())
+							{
 							if(!strcmp(ptempElement->Value(),"TexRECT"))
 							{
 								int l,t,r,b;
@@ -1903,15 +1912,20 @@ void CMANGOScene::InitDefaultElements(char * strName )
 									a= (atoi(ptempElement->Attribute("A")));
 								Element.FontColor.States[ MANGO_STATE_MOUSEOVER ] = D3DCOLOR_ARGB(a, r, g, b);
 							}
+							}
+							// Assign the Element
+							SetDefaultElement( MANGO_CONTROL_BUTTON, 0, &Element, type );
 						}
-						// Assign the Element
-						SetDefaultElement( MANGO_CONTROL_BUTTON, 0, &Element );
 					}else
 					{
 						if(!strcmp(ptempobject->Value(),"ButtonPress"))
 						{
-							for(tinyxml2::XMLElement* ptempElement=ptempobject->FirstChildElement();ptempElement;ptempElement = ptempElement->NextSiblingElement())
+							for(tinyxml2::XMLElement* ptempAttr=ptempobject->FirstChildElement();ptempAttr;ptempAttr = ptempAttr->NextSiblingElement())
 							{
+								if(ptempAttr->Attribute("Type"))
+									type= (atoi(ptempAttr->Attribute("Type")));
+								for(tinyxml2::XMLElement* ptempElement=ptempAttr->FirstChildElement();ptempElement;ptempElement = ptempElement->NextSiblingElement())
+								{
 								if(!strcmp(ptempElement->Value(),"TexRECT"))
 								{
 									int l,t,r,b;
@@ -1950,21 +1964,22 @@ void CMANGOScene::InitDefaultElements(char * strName )
 										a= (atoi(ptempElement->Attribute("A")));
 									Element.TextureColor.States[ MANGO_STATE_PRESSED ] = D3DCOLOR_ARGB(a, r, g, b);
 								}else
-									if(!strcmp(ptempElement->Value(),"TexColorFocus"))
-									{
-										if(ptempElement->Attribute("R"))
-											r= (atoi(ptempElement->Attribute("R")));			
-										if(ptempElement->Attribute("G"))
-											g= (atoi(ptempElement->Attribute("G")));					
-										if(ptempElement->Attribute("B"))
-											b= (atoi(ptempElement->Attribute("B")));			
-										if(ptempElement->Attribute("A"))
-											a= (atoi(ptempElement->Attribute("A")));
-										Element.TextureColor.States[ MANGO_STATE_FOCUS ] = D3DCOLOR_ARGB(a, r, g, b);
-									}	
+								if(!strcmp(ptempElement->Value(),"TexColorFocus"))
+								{
+									if(ptempElement->Attribute("R"))
+										r= (atoi(ptempElement->Attribute("R")));			
+									if(ptempElement->Attribute("G"))
+										g= (atoi(ptempElement->Attribute("G")));					
+									if(ptempElement->Attribute("B"))
+										b= (atoi(ptempElement->Attribute("B")));			
+									if(ptempElement->Attribute("A"))
+										a= (atoi(ptempElement->Attribute("A")));
+									Element.TextureColor.States[ MANGO_STATE_FOCUS ] = D3DCOLOR_ARGB(a, r, g, b);
+								}	
+								}
+								// Assign the Element
+								SetDefaultElement( MANGO_CONTROL_BUTTON, 1, &Element, type );
 							}
-							// Assign the Element
-							SetDefaultElement( MANGO_CONTROL_BUTTON, 1, &Element );
 						}
 
 					}

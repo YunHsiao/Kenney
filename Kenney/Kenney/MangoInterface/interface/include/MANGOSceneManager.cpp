@@ -37,7 +37,7 @@ CMANGOScene* CMANGOSceneManager::CreateScene(char * strName, INT iSceneID)
 	CMANGOScene *pScene = new CMANGOScene; 
 	if(sElemetName=="MANGOGUI")
 	{	
-		int id=0,x=0,y=0,width=0,height=0;
+		int id=0,x=0,y=0,width=0,height=0,type=0;
 		float z=1.0f;
 		char sText[256];
 
@@ -97,6 +97,8 @@ CMANGOScene* CMANGOSceneManager::CreateScene(char * strName, INT iSceneID)
 				height= (atoi(pRoot->Attribute("height")));
 			if(pRoot->Attribute("width"))
 				width= (atoi(pRoot->Attribute("width")));
+			if(pRoot->Attribute("type"))
+				type= (atoi(pRoot->Attribute("type")));
 
 			ZeroMemory(sText, sizeof(sText));
 			if(pRoot->GetText())
@@ -105,7 +107,7 @@ CMANGOScene* CMANGOSceneManager::CreateScene(char * strName, INT iSceneID)
 			
 			if(!strcmp(pRoot->Value(),"Button"))
 			{		
-				pScene->AddButton( id, text.c_str(), x, y, width, height ,z);
+				pScene->AddButton( id, text.c_str(), x, y, width, height, z, type);
 			}else
 			if(!strcmp(pRoot->Value(),"ComboBox"))
 			{

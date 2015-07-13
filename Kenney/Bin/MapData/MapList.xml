@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Map>
+	<Level LevelID="0" Path="MapData/level_00.xml" PlayerPositionX="64" PlayerPositionY="100"/>
+	<Level LevelID="1" Path="MapData/level_01.xml" PlayerPositionX="100" PlayerPositionY="100"/>
+	<Level LevelID="2" Path="MapData/level_02.xml" PlayerPositionX="100" PlayerPositionY="100"/>
+	<Level LevelID="3" Path="MapData/level_03.xml" PlayerPositionX="100" PlayerPositionY="100"/>
+	<Level LevelID="4" Path="MapData/level_04.xml" PlayerPositionX="100" PlayerPositionY="100"/>
+	<Level LevelID="5" Path="MapData/level_05.xml" PlayerPositionX="100" PlayerPositionY="100"/>
+</Map>
+
+
+
+

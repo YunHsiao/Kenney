@@ -1,0 +1,243 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\KenneyTaskEditor.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Saw.ico"
+IDI_ICON1               ICON                    "res\\Grass.ico"
+IDI_ICON2               ICON                    "res\\BoxItem.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 KenneyTaskEditor"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "KenneyTaskEditor 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_KenneyTaskEditor_DIALOG DIALOGEX 0, 0, 502, 402
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KenneyTaskEditor"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "地图",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,12,8,32,10
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_SHOWSELALWAYS | WS_BORDER | WS_HSCROLL | WS_TABSTOP,12,24,120,336
+    PUSHBUTTON      "新建任务",IDC_BUTTON4,18,367,50,24
+    PUSHBUTTON      "删除任务",IDC_BUTTON5,78,367,50,24
+    EDITTEXT        IDC_EDIT20,186,6,192,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO3,408,6,84,62,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,186,30,132,50,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,360,30,132,48,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO5,210,78,72,24,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT23,444,78,48,12,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT6,150,110,342,46,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_EDIT5,150,173,342,36,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_EDIT7,150,222,162,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT8,336,222,156,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT10,150,294,342,24,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,150,332,342,28,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDC_EDIT2,198,373,36,14,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT17,258,373,36,12,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT18,318,373,36,12,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT19,378,373,36,12,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    PUSHBUTTON      "保存",IDC_BUTTON6,432,367,50,24
+    CTEXT           "任务名称：",IDC_STATIC,144,6,42,11,SS_CENTERIMAGE
+    CTEXT           "派发NPC：",IDC_STATIC,150,30,36,11,SS_CENTERIMAGE
+    CTEXT           "回收NPC：",IDC_STATIC,324,30,36,12,SS_CENTERIMAGE
+    CTEXT           "类型：",IDC_STATIC,384,6,24,12,SS_CENTERIMAGE
+    CTEXT           "N任务描述：",IDC_STATIC,150,96,48,12,SS_CENTERIMAGE
+    CTEXT           "N接受任务感谢对话：",IDC_STATIC,150,158,78,12,SS_CENTERIMAGE
+    CTEXT           "P接受任务对话：",IDC_STATIC,150,210,60,12,SS_CENTERIMAGE
+    CTEXT           "P拒绝任务对话：",IDC_STATIC,336,210,60,12,SS_CENTERIMAGE
+    CTEXT           "N不满足条件任务交接对话：",IDC_STATIC,150,281,102,12,SS_CENTERIMAGE
+    CTEXT           "N完成任务感谢对话：",IDC_STATIC,150,318,78,12,SS_CENTERIMAGE
+    LTEXT           "报酬：",IDC_STATIC,150,373,24,12,SS_CENTERIMAGE
+    LTEXT           "金币",IDC_STATIC,240,373,18,12,SS_CENTERIMAGE
+    LTEXT           "银币",IDC_STATIC,300,373,18,12,SS_CENTERIMAGE
+    LTEXT           "铜币",IDC_STATIC,360,373,18,12,SS_CENTERIMAGE
+    CTEXT           "所需任务物品：",IDC_STATIC,150,78,60,12,SS_CENTERIMAGE
+    CTEXT           "物品数量：",IDC_STATIC,402,78,42,12,SS_CENTERIMAGE
+    LTEXT           "金星",IDC_STATIC,180,373,18,12,SS_CENTERIMAGE
+    CTEXT           "派发NPC所在地图ID：",IDC_STATIC,150,48,78,12,SS_CENTERIMAGE
+    CTEXT           "回收NPC所在地图ID：",IDC_STATIC,324,48,78,12,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,144,24,354,43
+    CTEXT           "所属地图ID：",IDC_STATIC,288,78,48,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO4,228,48,90,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO6,402,48,90,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO7,336,78,60,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT13,150,252,342,28,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    CTEXT           "N已经接受任务对话：",IDC_STATIC,147,238,81,12,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "YunHsiao"
+            VALUE "FileDescription", "任务编辑器"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "KenneyTaskEditor.exe"
+            VALUE "LegalCopyright", "YunHsiao"
+            VALUE "OriginalFilename", "KenneyTaskEditor.exe"
+            VALUE "ProductName", "任务编辑器"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_KenneyTaskEditor_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 495
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 395
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 KenneyTaskEditor(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\KenneyTaskEditor.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

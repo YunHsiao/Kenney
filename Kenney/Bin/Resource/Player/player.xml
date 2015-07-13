@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Player>
+  <Role id="3001" hp="10" acc="400" spe="120" height="330" g="1000" waterg="400"/>
+  <Role id="3002" hp="8" acc="500" spe="150" height="350" g="800" waterg="200"/>
+  <Role id="3003" hp="8" acc="500" spe="170" height="330" g="750" waterg="200"/>
+  <Role id="3004" hp="6" acc="600" spe="210" height="400" g="800" waterg="200"/>
+  <Role id="3005" hp="6" acc="500" spe="170" height="450" g="750" waterg="180"/>
+</Player>

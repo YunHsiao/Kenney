@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Task>
+	<Level ID="0" Path="Resource/Task/KillMonster.xml"/>
+	<Level ID="1" Path="Resource/Task/Gather.xml"/>
+	<Level ID="2" Path="Resource/Task/Dialogue.xml"/>
+</Task>

@@ -568,9 +568,9 @@ void CMapEditView::RenderLine()
 {
 	if(TRUE == m_bIsLine)
 	{
-		POINT offset;
-		offset.x = m_nMapCoord.x/MOUSE_SPACING*(MOUSE_SPACING+1) - m_nMapCoord.x;
-		offset.y = m_nMapCoord.y/MOUSE_SPACING*(MOUSE_SPACING+1) - m_nMapCoord.y;
+		POINT offset;  
+		offset.x = (m_nMapCoord.x/MOUSE_SPACING+1)*MOUSE_SPACING - m_nMapCoord.x;
+		offset.y = (m_nMapCoord.y/MOUSE_SPACING+1)*MOUSE_SPACING - m_nMapCoord.y;
 		_pLine->Begin();
 		for(FLOAT row(0);row<13;++row)
 		{
@@ -643,6 +643,7 @@ HRESULT CMapEditView::Render()
 			// 绘制元素层
 			for(size_t i(0);i<m_stdMapBrushElement.size();++i)
 			{
+				if (!m_stdMapBrushElement[i]->IsValid()) continue;
 				if(m_bIsRedLine)
 					m_stdMapBrushElement[i]->Render(_pLine,m_nMapCoord,FALSE);
 				else
@@ -725,11 +726,11 @@ void CMapEditView::OnMouseMove(UINT nFlags, CPoint point) {
 	point += m_nMapCoord;
 	CPoint tmp = point;
 
-	float row = (float)(point.x / MOUSE_SPACING);
-	float col = (float)(point.y / MOUSE_SPACING);
+	long row = point.x / MOUSE_SPACING;
+	long col = point.y / MOUSE_SPACING;
 
-	point.x = (int)(row * MOUSE_SPACING);
-	point.y = (int)(col * MOUSE_SPACING);
+	point.x = row * MOUSE_SPACING;
+	point.y = col * MOUSE_SPACING;
 
 	if(m_bIsNewMap) {
 		if (nFlags == MK_MBUTTON) {
@@ -753,9 +754,24 @@ void CMapEditView::OnMouseMove(UINT nFlags, CPoint point) {
 					break;
 				}
 			}
-		} else if(m_emCursorLayout != CURSOR_NONE) {
+		} else if (m_emCursorLayout != CURSOR_NONE) {
 			g_pDrawBrush[m_emCursorLayout].SetTexturePosition(
 				(float)point.x, (float)point.y);
+			if (nFlags == (MK_SHIFT | MK_LBUTTON)) {
+				if (point != m_pLastBrush) {
+					MouseDownBrushMap(point);
+					m_pLastBrush = point;
+				}
+			}
+		} else if (nFlags == (MK_SHIFT | MK_LBUTTON)) {
+			if (point != m_pLastBrush) {
+				MousePickBrushMap(tmp);
+				if (m_emCursorLayout != CURSOR_NONE) {
+					g_pDrawBrush[m_emCursorLayout].SetActive(FALSE);
+					m_emCursorLayout = CURSOR_NONE;
+				}
+				m_pLastBrush = point;
+			}
 		}
 	}
 
@@ -798,13 +814,13 @@ void CMapEditView::OnLButtonDown(UINT nFlags, CPoint point)
 	point.y += m_nMapCoord.y;
 	CPoint tmp = point;
 
-	int row = point.x/MOUSE_SPACING;
-	int col = point.y/MOUSE_SPACING;
+	long row = point.x / MOUSE_SPACING;
+	long col = point.y / MOUSE_SPACING;
 
-	point.x = row*MOUSE_SPACING;
-	point.y = col*MOUSE_SPACING;
+	point.x = row * MOUSE_SPACING;
+	point.y = col * MOUSE_SPACING;
 
-	if(!m_bIsNewMap)
+	if(!m_bIsNewMap || nFlags & MK_SHIFT)
 	{
 		return;
 	}
@@ -884,6 +900,7 @@ void CMapEditView::MousePickBrushMap(CPoint point)
 	// 注意:倒序遍历是让最前面的先做判断
 	for(int i((int)m_stdMapBrushElement.size()-1);i>-1;--i)
 	{
+		if (!m_stdMapBrushElement[i]->IsValid()) continue;
 		// 元素的矩形
 		RECT rect   = CRect(0,0,0,0);
 		rect.left   = (LONG)m_stdMapBrushElement[i]->GetPositionX();
@@ -1177,8 +1194,8 @@ void CMapEditView::LoadFileByBin(std::wstring PathName)
 	DWORD trigNum;    // 触发元素的个数
 
 	fread_s(&brushNum,  sizeof(DWORD),sizeof(DWORD),1,file);
-	fread_s(&npcNum,    sizeof(DWORD),sizeof(DWORD),1,file);
 	fread_s(&monsterNum,sizeof(DWORD),sizeof(DWORD),1,file);
+	fread_s(&npcNum,    sizeof(DWORD),sizeof(DWORD),1,file);
 	fread_s(&trigNum,   sizeof(DWORD),sizeof(DWORD),1,file);
 
 	// 画刷元素数据
@@ -1193,8 +1210,24 @@ void CMapEditView::LoadFileByBin(std::wstring PathName)
 		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_BRUSH].GetTexturePoint(),g_pDrawBrush[CURSOR_BRUSH].GetTextureMaxNum());
 		draw->SetTexturePosition((float)x,(float)y);
 		draw->SetActive();
-		draw->SetTextureNum(index);
+		draw->SetTextureNum(index - 1);
 		m_stdMapBrushElement.push_back(draw);
+	}
+
+	// 怪物元素数据
+	for(DWORD i(0);i < monsterNum;++i)
+	{
+		int index,x,y;
+		fread_s(&index,sizeof(DWORD),sizeof(DWORD),1,file);
+		fread_s(&x,    sizeof(DWORD),sizeof(DWORD),1,file);
+		fread_s(&y,    sizeof(DWORD),sizeof(DWORD),1,file);
+
+		CDrawBrush* draw = new CDrawBrush;
+		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_MONSTER].GetTexturePoint(),g_pDrawBrush[CURSOR_MONSTER].GetTextureMaxNum());
+		draw->SetTexturePosition((float)x,(float)y);
+		draw->SetActive();
+		draw->SetTextureNum(index - 1);
+		m_stdMapMonsterElement.push_back(draw);
 	}
 
 	// NPC元素数据
@@ -1211,22 +1244,6 @@ void CMapEditView::LoadFileByBin(std::wstring PathName)
 		draw->SetActive();
 		draw->SetTextureNum(index - 1);
 		m_stdMapNpcElement.push_back(draw);
-	}
-
-	// 怪物元素数据
-	for(DWORD i(0);i < monsterNum;++i)
-	{
-		int index,x,y;
-		fread_s(&index,sizeof(DWORD),sizeof(DWORD),1,file);
-		fread_s(&x,    sizeof(DWORD),sizeof(DWORD),1,file);
-		fread_s(&y,    sizeof(DWORD),sizeof(DWORD),1,file);
-
-		CDrawBrush* draw = new CDrawBrush;
-		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_MONSTER].GetTexturePoint(),g_pDrawBrush[CURSOR_MONSTER].GetTextureMaxNum());
-		draw->SetTexturePosition((float)x,(float)y);
-		draw->SetActive();
-		draw->SetTextureNum(index);
-		m_stdMapMonsterElement.push_back(draw);
 	}
 
 	// 触发元素数据
@@ -1299,8 +1316,8 @@ void CMapEditView::LoadFileByTex(std::wstring PathName)
 	int monsterNum = 0; // 怪物元素的个数
 	int trigNum    = 0; // 触发元素的个数
 	fscanf_s(file,"%d",&brushNum);
-	fscanf_s(file,"%d",&npcNum);
 	fscanf_s(file,"%d",&monsterNum);
+	fscanf_s(file,"%d",&npcNum);
 	fscanf_s(file,"%d",&trigNum);
 
 	// 画刷元素数据
@@ -1313,8 +1330,22 @@ void CMapEditView::LoadFileByTex(std::wstring PathName)
 		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_BRUSH].GetTexturePoint(),g_pDrawBrush[CURSOR_BRUSH].GetTextureMaxNum());
 		draw->SetTexturePosition((float)x,(float)y);
 		draw->SetActive();
-		draw->SetTextureNum(index);
+		draw->SetTextureNum(index - 1);
 		m_stdMapBrushElement.push_back(draw);
+	}
+
+	// 怪物元素数据
+	for(int i(0);i < monsterNum;++i)
+	{
+		int index(0),x(0),y(0);
+		fscanf_s(file,"%d %d %d",&index,&x,&y);
+
+		CDrawBrush* draw = new CDrawBrush;
+		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_MONSTER].GetTexturePoint(),g_pDrawBrush[CURSOR_MONSTER].GetTextureMaxNum());
+		draw->SetTexturePosition((float)x,(float)y);
+		draw->SetActive();
+		draw->SetTextureNum(index - 1);
+		m_stdMapMonsterElement.push_back(draw);
 	}
 
 	// NPC元素数据
@@ -1329,20 +1360,6 @@ void CMapEditView::LoadFileByTex(std::wstring PathName)
 		draw->SetActive();
 		draw->SetTextureNum(index - 1);
 		m_stdMapNpcElement.push_back(draw);
-	}
-
-	// 怪物元素数据
-	for(int i(0);i < monsterNum;++i)
-	{
-		int index(0),x(0),y(0);
-		fscanf_s(file,"%d %d %d",&index,&x,&y);
-
-		CDrawBrush* draw = new CDrawBrush;
-		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_MONSTER].GetTexturePoint(),g_pDrawBrush[CURSOR_MONSTER].GetTextureMaxNum());
-		draw->SetTexturePosition((float)x,(float)y);
-		draw->SetActive();
-		draw->SetTextureNum(index);
-		m_stdMapMonsterElement.push_back(draw);
 	}
 
 	// 触发元素数据
@@ -1415,8 +1432,23 @@ void CMapEditView::LoadFileByXml(std::wstring PathName) {
 		draw->SetTexturePosition((FLOAT)atoi(child->Attribute("x")), 
 			(FLOAT)atoi(child->Attribute("y")));
 		draw->SetActive();
-		draw->SetTextureNum(atoi(child->Attribute("index")));
+		draw->SetTextureNum(atoi(child->Attribute("index"))-1);
 		m_stdMapBrushElement.push_back(draw);
+		child = child->NextSiblingElement();
+	}
+
+	// 怪物元素数据
+	node = doc.FirstChildElement("Monster");
+	child = node->FirstChildElement();
+	while (child)
+	{
+		CDrawBrush* draw = new CDrawBrush;
+		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_MONSTER].GetTexturePoint(),g_pDrawBrush[CURSOR_MONSTER].GetTextureMaxNum());
+		draw->SetTexturePosition((FLOAT)atoi(child->Attribute("x")),
+			(FLOAT)atoi(child->Attribute("y")));
+		draw->SetActive();
+		draw->SetTextureNum(atoi(child->Attribute("index"))-1);
+		m_stdMapMonsterElement.push_back(draw);
 		child = child->NextSiblingElement();
 	}
 
@@ -1432,21 +1464,6 @@ void CMapEditView::LoadFileByXml(std::wstring PathName) {
 		draw->SetActive();
 		draw->SetTextureNum(atoi(child->Attribute("index"))-1);
 		m_stdMapNpcElement.push_back(draw);
-		child = child->NextSiblingElement();
-	}
-
-	// 怪物元素数据
-	node = doc.FirstChildElement("Monster");
-	child = node->FirstChildElement();
-	while (child)
-	{
-		CDrawBrush* draw = new CDrawBrush;
-		draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_MONSTER].GetTexturePoint(),g_pDrawBrush[CURSOR_MONSTER].GetTextureMaxNum());
-		draw->SetTexturePosition((FLOAT)atoi(child->Attribute("x")),
-			(FLOAT)atoi(child->Attribute("y")));
-		draw->SetActive();
-		draw->SetTextureNum(atoi(child->Attribute("index")));
-		m_stdMapMonsterElement.push_back(draw);
 		child = child->NextSiblingElement();
 	}
 
@@ -1502,7 +1519,7 @@ void CMapEditView::OnFileOpen()
 	IsSaveMap();
 
 	CFileDialog cfile(TRUE);
-	cfile.m_ofn.lpstrFilter = L"BSP(*.bsp)\0*.bsp\0MAP(*.map)\0*.map\0XML(*.xml)\0*.xml\0\0";
+	cfile.m_ofn.lpstrFilter = L"XML(*.xml)\0*.xml\0BSP(*.bsp)\0*.bsp\0MAP(*.map)\0*.map\0\0";
 
 	// 获得当前目录
 	//WCHAR buff[MAX_PATH];
@@ -1526,18 +1543,18 @@ void CMapEditView::OnFileOpen()
 
 		DWORD Index = cfile.GetOFN().nFilterIndex;
 
-		// 1 == .bsp(二进制) 2 == .map(文本) 3 = .xml(标记语言)
+		// 1 == .xml(标记语言) 2 == .bsp(二进制) 3 = .map(文本)
 		if(Index == 1)
 		{
-			LoadFileByBin(buff);
+			LoadFileByXml(buff);
 		}
 		else if(Index == 2)
 		{
-			LoadFileByTex(buff);
+			LoadFileByBin(buff);
 		}
 		else if(Index == 3)
 		{
-			LoadFileByXml(buff);
+			LoadFileByTex(buff);
 		}
 
 		// 打开文件后触发块要检测
@@ -1597,9 +1614,23 @@ void CMapEditView::SaveFileByBin(std::wstring PathName)
 	// 画刷元素的数据写入
 	for(DWORD i(0);i < brushNum;++i)
 	{
-		DWORD index = m_stdMapBrushElement[i]->GetTextrueNum();
+		DWORD index = m_stdMapBrushElement[i]->GetTextrueNum() + 1;
 		DWORD x     = (DWORD)m_stdMapBrushElement[i]->GetPositionX();
 		DWORD y     = (DWORD)m_stdMapBrushElement[i]->GetPositionY();
+		fwrite(&index,sizeof(DWORD),1,file);
+		fwrite(&x,    sizeof(DWORD),1,file);
+		fwrite(&y,    sizeof(DWORD),1,file);
+	}
+
+	// 怪物元素排序升序
+	sort(m_stdMapMonsterElement.begin(),m_stdMapMonsterElement.end(),CDrawBrushComp());
+
+	// 怪物元素的数据写入
+	for(DWORD i(0);i < monsterNum;++i)
+	{
+		DWORD index = m_stdMapMonsterElement[i]->GetTextrueNum() + 1;
+		DWORD x     = (DWORD)m_stdMapMonsterElement[i]->GetPositionX();
+		DWORD y     = (DWORD)m_stdMapMonsterElement[i]->GetPositionY();
 		fwrite(&index,sizeof(DWORD),1,file);
 		fwrite(&x,    sizeof(DWORD),1,file);
 		fwrite(&y,    sizeof(DWORD),1,file);
@@ -1614,20 +1645,6 @@ void CMapEditView::SaveFileByBin(std::wstring PathName)
 		DWORD index = m_stdMapNpcElement[i]->GetTextrueNum() + 1;
 		DWORD x     = (DWORD)m_stdMapNpcElement[i]->GetPositionX();
 		DWORD y     = (DWORD)m_stdMapNpcElement[i]->GetPositionY();
-		fwrite(&index,sizeof(DWORD),1,file);
-		fwrite(&x,    sizeof(DWORD),1,file);
-		fwrite(&y,    sizeof(DWORD),1,file);
-	}
-
-	// 怪物元素排序升序
-	sort(m_stdMapMonsterElement.begin(),m_stdMapMonsterElement.end(),CDrawBrushComp());
-
-	// 怪物元素的数据写入
-	for(DWORD i(0);i < monsterNum;++i)
-	{
-		DWORD index = m_stdMapMonsterElement[i]->GetTextrueNum();
-		DWORD x     = (DWORD)m_stdMapMonsterElement[i]->GetPositionX();
-		DWORD y     = (DWORD)m_stdMapMonsterElement[i]->GetPositionY();
 		fwrite(&index,sizeof(DWORD),1,file);
 		fwrite(&x,    sizeof(DWORD),1,file);
 		fwrite(&y,    sizeof(DWORD),1,file);
@@ -1689,19 +1706,19 @@ void CMapEditView::SaveFileByTex(std::wstring PathName)
 	strcat_s(brushBuff,-1,"\n");
 	fwrite(brushBuff,strlen(brushBuff),1,file);
 
-	// NPC元素的个数
-	int npcNum = (int)m_stdMapNpcElement.size();
-	char npcBuff[8] = {0};
-	_itoa_s(npcNum,npcBuff,-1,10);
-	strcat_s(npcBuff,-1,"\n");
-	fwrite(npcBuff,strlen(npcBuff),1,file);
-
 	// 怪物元素的个数
 	int monsterNum = (int)m_stdMapMonsterElement.size();
 	char monsterBuff[8] = {0};
 	_itoa_s(monsterNum,monsterBuff,-1,10);
 	strcat_s(monsterBuff,-1,"\n");
 	fwrite(monsterBuff,strlen(monsterBuff),1,file);
+
+	// NPC元素的个数
+	int npcNum = (int)m_stdMapNpcElement.size();
+	char npcBuff[8] = {0};
+	_itoa_s(npcNum,npcBuff,-1,10);
+	strcat_s(npcBuff,-1,"\n");
+	fwrite(npcBuff,strlen(npcBuff),1,file);
 
 	// 触发元素的个数
 	int trigNum = (int)m_stdMapTrigElement.size();
@@ -1716,9 +1733,29 @@ void CMapEditView::SaveFileByTex(std::wstring PathName)
 	// 画刷元素的数据写入
 	for(int i(0);i < brushNum;++i)
 	{
-		int index = m_stdMapBrushElement[i]->GetTextrueNum();
+		int index = m_stdMapBrushElement[i]->GetTextrueNum() + 1;
 		int x     = (int)m_stdMapBrushElement[i]->GetPositionX();
 		int y     = (int)m_stdMapBrushElement[i]->GetPositionY();
+
+		std::stringstream sstr;
+		sstr << index;
+		sstr << ' ';
+		sstr << x;
+		sstr << ' ';
+		sstr << y;
+		sstr << '\n';
+		fwrite(sstr.str().c_str(),sstr.str().size(),1,file);
+	}
+
+	// 怪物元素排序升序
+	sort(m_stdMapMonsterElement.begin(),m_stdMapMonsterElement.end(),CDrawBrushComp());
+
+	// 怪物元素的数据写入
+	for(int i(0);i < monsterNum;++i)
+	{
+		int index = m_stdMapMonsterElement[i]->GetTextrueNum() + 1;
+		int x     = (int)m_stdMapMonsterElement[i]->GetPositionX();
+		int y     = (int)m_stdMapMonsterElement[i]->GetPositionY();
 
 		std::stringstream sstr;
 		sstr << index;
@@ -1739,26 +1776,6 @@ void CMapEditView::SaveFileByTex(std::wstring PathName)
 		int index = m_stdMapNpcElement[i]->GetTextrueNum() + 1;
 		int x     = (int)m_stdMapNpcElement[i]->GetPositionX();
 		int y     = (int)m_stdMapNpcElement[i]->GetPositionY();
-
-		std::stringstream sstr;
-		sstr << index;
-		sstr << ' ';
-		sstr << x;
-		sstr << ' ';
-		sstr << y;
-		sstr << '\n';
-		fwrite(sstr.str().c_str(),sstr.str().size(),1,file);
-	}
-
-	// 怪物元素排序升序
-	sort(m_stdMapMonsterElement.begin(),m_stdMapMonsterElement.end(),CDrawBrushComp());
-
-	// 怪物元素的数据写入
-	for(int i(0);i < monsterNum;++i)
-	{
-		int index = m_stdMapMonsterElement[i]->GetTextrueNum();
-		int x     = (int)m_stdMapMonsterElement[i]->GetPositionX();
-		int y     = (int)m_stdMapMonsterElement[i]->GetPositionY();
 
 		std::stringstream sstr;
 		sstr << index;
@@ -1837,12 +1854,60 @@ void CMapEditView::SaveFileByXml(std::wstring PathName) {
 	for (ElementsIt it(m_stdMapBrushElement.begin()); it != m_stdMapBrushElement.end(); ++it)
 	{
 		child = doc.NewElement("Element");
-		int index = (*it)->GetTextrueNum();
+		int index = (*it)->GetTextrueNum() + 1;
 		int x     = (int)(*it)->GetPositionX();
 		int y     = (int)(*it)->GetPositionY();
 		child->SetAttribute("index", index);
 		child->SetAttribute("x", x);
 		child->SetAttribute("y", y);
+		if (index == 150) {
+			ElementsIt it2(m_stdMapTrigElement.begin());
+			for (; it2 != m_stdMapTrigElement.end(); ++it2)
+			{
+				if (abs((*it2)->GetPositionX() - x) + abs((*it2)->GetPositionY() - y) < MOUSE_SPACING*2) {
+					child->SetAttribute("TriggerID", (*it2)->GetTrigMapID());
+					break;
+				}
+			}
+			if (it2 == m_stdMapTrigElement.end()) {
+				WCHAR info[256];
+				swprintf_s(info, 256, L"还有传送门尚未规定目标，位置(%d, %d)", x, y);
+				MessageBox(info);
+			}
+		}
+		node->InsertEndChild(child);
+	}
+	doc.InsertEndChild(node);
+
+	// 怪物元素排序升序
+	sort(m_stdMapMonsterElement.begin(),m_stdMapMonsterElement.end(),CDrawBrushComp());
+
+	// 怪物元素的数据写入
+	node = doc.NewElement("Monster");
+	for (ElementsIt it(m_stdMapMonsterElement.begin()); it != m_stdMapMonsterElement.end(); ++it)
+	{
+		child = doc.NewElement("Element");
+		int index = (*it)->GetTextrueNum() + 1;
+		int x     = (int)(*it)->GetPositionX();
+		int y     = (int)(*it)->GetPositionY();
+		child->SetAttribute("index", index);
+		child->SetAttribute("x", x);
+		child->SetAttribute("y", y);
+		if (index == 10) {
+			ElementsIt it2(m_stdMapTrigElement.begin());
+			for (; it2 != m_stdMapTrigElement.end(); ++it2)
+			{
+				if (abs((*it2)->GetPositionX() - x) + abs((*it2)->GetPositionY() - y) < MOUSE_SPACING*2) {
+					child->SetAttribute("switch", (*it2)->GetTrigMapID()?1:0);
+					break;
+				}
+			}
+			if (it2 == m_stdMapTrigElement.end()) {
+				WCHAR info[256];
+				swprintf_s(info, 256, L"还有齿轮怪物尚未规定移动方向，位置(%d, %d)，0为纵向其他为横向", x, y);
+				MessageBox(info);
+			}
+		}
 		node->InsertEndChild(child);
 	}
 	doc.InsertEndChild(node);
@@ -1856,24 +1921,6 @@ void CMapEditView::SaveFileByXml(std::wstring PathName) {
 	{
 		child = doc.NewElement("Element");
 		int index = (*it)->GetTextrueNum() + 1;
-		int x     = (int)(*it)->GetPositionX();
-		int y     = (int)(*it)->GetPositionY();
-		child->SetAttribute("index", index);
-		child->SetAttribute("x", x);
-		child->SetAttribute("y", y);
-		node->InsertEndChild(child);
-	}
-	doc.InsertEndChild(node);
-
-	// 怪物元素排序升序
-	sort(m_stdMapMonsterElement.begin(),m_stdMapMonsterElement.end(),CDrawBrushComp());
-
-	// 怪物元素的数据写入
-	node = doc.NewElement("Monster");
-	for (ElementsIt it(m_stdMapMonsterElement.begin()); it != m_stdMapMonsterElement.end(); ++it)
-	{
-		child = doc.NewElement("Element");
-		int index = (*it)->GetTextrueNum();
 		int x     = (int)(*it)->GetPositionX();
 		int y     = (int)(*it)->GetPositionY();
 		child->SetAttribute("index", index);
@@ -2009,7 +2056,7 @@ void CMapEditView::OnFileSave()
 
 	// 开始地图文件保存
 	CFileDialog cfile(FALSE);
-	cfile.m_ofn.lpstrFilter = L"BSP(*.bsp)\0*.bsp\0MAP(*.map)\0*.map\0XML(*.xml)\0*.xml\0\0";
+	cfile.m_ofn.lpstrFilter = L"XML(*.xml)\0*.xml\0BSP(*.bsp)\0*.bsp\0MAP(*.map)\0*.map\0\0";
 
 	// 第一次的时候才加上\\Save
 	//static int one(0);
@@ -2033,20 +2080,20 @@ void CMapEditView::OnFileSave()
 		if(!LoadCfgFile())
 			return;
 
-		// 1 == .bsp(二进制) 2 == .map(文本) 3 == .xml(标记语言)
+		// 1 == .xml(标记语言) 2 == .bsp(二进制) 3 == .map(文本)
 		DWORD Index = cfile.GetOFN().nFilterIndex;
 
 		if(Index == 1)
 		{
-			SaveFileByBin(buff);
+			SaveFileByXml(buff);
 		}
 		else if(Index == 2)
 		{
-			SaveFileByTex(buff);
+			SaveFileByBin(buff);
 		}
 		else if(Index == 3)
 		{
-			SaveFileByXml(buff);
+			SaveFileByTex(buff);
 		}
 
 		AfxMessageBox(L"地图文件保存成功!");
@@ -2151,13 +2198,8 @@ BOOL CMapEditView::PreTranslateMessage(MSG* pMsg)
 				CDrawBrush* draw = new CDrawBrush;
 				draw->OnCreateByPoint(_pd3dDevice,g_pDrawBrush[CURSOR_TRIG].GetTexturePoint(),g_pDrawBrush[CURSOR_TRIG].GetTextureMaxNum());
 
-				//draw->SetTextureNum(m_nTriggerNum);
-
 				draw->SetTrigMapID(m_nTrigMapID);
-
-				//++m_nTriggerNum;
-				//draw->SetTrigMapID(m_nTriggerNum);//设置此触发块ID
-				draw->SetTextureNum(m_nTriggerNum++);
+				draw->SetTextureNum(m_nTrigMapID/*m_nTriggerNum++*/);	//设置此触发块ID
 
 				draw->SetSelectState(TRUE);
 				draw->SetTexturePosition(-32.f,-32.f);

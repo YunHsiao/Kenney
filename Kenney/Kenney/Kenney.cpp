@@ -2,6 +2,11 @@
 #include "Kenney.h"
 #include "MangoGUICallBack.h"
 #include "SceneManager.h"
+#include "NPCDialog.h"
+#include "DlgDefine.h"
+#include "TaskDialog.h"
+#include "ShopDialog.h"
+#include "Goods.h"
 
 #define NAMETITLE TEXT("Kenney")
 
@@ -19,17 +24,13 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 //--------------------------------------------------------------------------------------
 
 CGame::CGame(void)
-//,m_pUILogo(NULL)
-//,m_pUILogin(NULL)
-//,m_pUIChoose(NULL)
 {
+
 }
 
 CGame::~CGame(void)
 {
-	//SAFE_DELETE(m_pUILogo);
-	//SAFE_DELETE(m_pUILogin);
-	//SAFE_DELETE(m_pUIChoose);
+
 }
 
 void CGame::Initialize()
@@ -46,8 +47,6 @@ void CGame::Initialize()
 	MANGOSetMsgProc( ::MsgProc );
 	MANGOSetKeyboard( ::KeyboardProc );
 
-	InitGame();
-
 	MANGOInit( true, true, true );
 	MANGOSetCursorSettings( true, true );
 
@@ -59,6 +58,8 @@ void CGame::Initialize()
 	SendMessage(MANGOGetHWND(), WM_SETICON, ICON_BIG,  (LPARAM)hIcon);
 	hIcon = LoadIcon(MANGOGetHINSTANCE(), MAKEINTRESOURCE(IDI_SMALL));
 	SendMessage(MANGOGetHWND(), WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
+	HCURSOR hCursor = LoadCursor(MANGOGetHINSTANCE(), MAKEINTRESOURCE(IDC_CURSOR2));
+	::SetClassLong(MANGOGetHWND(), GCL_HCURSOR, (long)hCursor);
 }
 
 void CGame::GameRun()
@@ -68,6 +69,7 @@ void CGame::GameRun()
 
 int CGame::GameExit()
 {
+	CSceneManager::GetIntance()->Destroy();
 	return MANGOGetExitCode();
 }
 
@@ -76,15 +78,8 @@ int CGame::GameExit()
 void CGame::InitGame()
 {
 	m_SceneManager.SetCallback(::OnGUIEvent);
-
-	//m_pUILogo = new CUILogo;
-	//m_pUILogo->Initialize(m_SceneManager);
-
-	//m_pUILogin = new CUILogin;
-	//m_pUILogin->Initialize(m_SceneManager);
-
-	//m_pUIChoose = new CUIChoose;
-	//m_pUIChoose->Initialize(m_SceneManager);
+	if (!CSceneManager::GetIntance()->Initialize(MANGOGetD3DDevice(), &m_SceneManager))
+		return;
 }
 
 bool CGame::Tick(float fElapsedTime)
@@ -101,6 +96,7 @@ HRESULT CGame::OnCreateDevice( IDirect3DDevice9* pd3dDevice,const D3DSURFACE_DES
 {
 	HRESULT hr;
 	V_RETURN( m_SceneManager.OnCreateDevice( pd3dDevice ) );
+	InitGame();
 	return hr;
 }
 
@@ -137,7 +133,7 @@ void CGame::OnDestroyDevice(void* pUserContext)
 
 void CGame::OnFrameMove(IDirect3DDevice9* pd3dDevice, double fTime, float fElapsedTime, void* pUserContext)
 {
-	Tick(fElapsedTime);
+	Tick(fElapsedTime>.1f?.1f:fElapsedTime);
 }
 
 void CGame::OnFrameRender(IDirect3DDevice9* pd3dDevice, double fTime, float fElapsedTime, void* pUserContext)
@@ -150,6 +146,7 @@ void CGame::OnFrameRender(IDirect3DDevice9* pd3dDevice, double fTime, float fEla
 	if( SUCCEEDED( pd3dDevice->BeginScene() ) )
 	{
 		MANGO_BeginPerfEvent( MANGO_PERFEVENTCOLOR, L"HUD / Stats" );
+		CSceneManager::GetIntance()->Render();
 		m_SceneManager.OnRender(fElapsedTime);
 		MANGO_EndPerfEvent();
 
@@ -159,19 +156,22 @@ void CGame::OnFrameRender(IDirect3DDevice9* pd3dDevice, double fTime, float fEla
 
 void CGame::OnGameGUIEvent(UINT nEvent, int nControlID, CMANGOControl* pControl, void* pUserContext)
 {
-	//int iScene = (int)pUserContext;
-	//switch (iScene)
-	//{
-	//case EUI_LOGIN_BG:
-	//case EUI_LOGIN_HELP:
-	//case EUI_LOGIN:
-	//	m_pUILogin->OnGameGUIEvent(nEvent, nControlID, pControl, pUserContext);
-	//	break;
-
-	//case EUI_CHOOSE:
-	//	m_pUIChoose->OnGameGUIEvent(nEvent, nControlID, pControl, pUserContext);
-	//	break;
-	//}
+	int iScene = (int)pUserContext;
+	switch(iScene)
+	{
+	case ED_NPCDialog:
+		CNPCDialog::GetInstance()->OnGameGUIEvent(nEvent,nControlID,pControl,pUserContext);
+		break;
+	case ED_TaskDialog:
+		CTaskDialog::GetInstance()->OnGameGUIEvent(nEvent,nControlID,pControl,pUserContext);
+		break;
+	case ED_ShopDialog:
+		CShopDialog::GetInstance()->OnGameGUIEvent(nEvent,nControlID,pControl,pUserContext);
+		break;
+	case ED_Goods:
+		CGoods::GetInstance()->OnGameGUIEvent(nEvent,nControlID,pControl,pUserContext);
+		break;
+	}
 }
 
 void CGame::KeyboardProc(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserContext)
@@ -180,10 +180,6 @@ void CGame::KeyboardProc(UINT nChar, bool bKeyDown, bool bAltDown, void* pUserCo
 
 LRESULT CGame::MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,bool* pbNoFurtherProcessing, void* pUserContext)
 {
-	//*pbNoFurtherProcessing = m_pUILogo->MsgProc(hWnd, uMsg, wParam, lParam) != 0;
-	//if( *pbNoFurtherProcessing )
-	//	return 1;
-
 	*pbNoFurtherProcessing = m_SceneManager.MsgProc( hWnd, uMsg, wParam, lParam );
 	if( *pbNoFurtherProcessing )
 		return 1;

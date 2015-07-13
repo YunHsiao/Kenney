@@ -19,7 +19,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="..\Bin"
-			IntermediateDirectory="..\Intermedia\$(ConfigurationName)"
+			IntermediateDirectory="..\Intermediate\$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="1"
 			>
@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".\MangoInterface\interface;.\tinyxml2;.\Scene;.\Scene\Actor;.\Scene\Actor\Player;&quot;E:\Visual Studio 2008\Projects\Kenney\Kenney\Scene\Actor\Player\Controller&quot;"
+				AdditionalIncludeDirectories=".\MangoInterface\interface;.\tinyxml2;.\Scene;.\Scene\Task;.\Scene\Actor;.\Scene\Actor\Player;.\Scene\Actor\Player\Controller;.\Scene\Actor\Monster;.\Scene\Actor\NPC;.\UI;.\UI\Item;.\UI\Dialog"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -94,7 +94,7 @@
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="..\Bin"
-			IntermediateDirectory="..\Intermedia\$(ConfigurationName)"
+			IntermediateDirectory="..\Intermediate\$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
@@ -116,9 +116,9 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
+				Optimization="3"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories=".\MangoInterface\interface;.\tinyxml2;.\Scene;.\Scene\Actor;.\Scene\Actor\Player"
+				AdditionalIncludeDirectories=".\MangoInterface\interface;.\tinyxml2;.\Scene;.\Scene\Task;.\Scene\Actor;.\Scene\Actor\Player;.\Scene\Actor\Player\Controller;.\Scene\Actor\Monster;.\Scene\Actor\NPC;.\UI;.\UI\Item;.\UI\Dialog"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="true"
@@ -240,6 +240,18 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
+				RelativePath=".\cursorHand_beige.cur"
+				>
+			</File>
+			<File
+				RelativePath=".\cursorHand_blue.cur"
+				>
+			</File>
+			<File
+				RelativePath=".\cursorHand_grey.cur"
+				>
+			</File>
+			<File
 				RelativePath=".\Kenney.ico"
 				>
 			</File>
@@ -310,11 +322,7 @@
 						>
 					</File>
 					<File
-						RelativePath=".\Scene\Actor\Player\PlayerManager.cpp"
-						>
-					</File>
-					<File
-						RelativePath=".\Scene\Actor\Player\PlayerManager.h"
+						RelativePath=".\Scene\Actor\Player\PlayerState.cpp"
 						>
 					</File>
 					<Filter
@@ -330,6 +338,170 @@
 						</File>
 					</Filter>
 				</Filter>
+				<Filter
+					Name="Monster"
+					>
+					<File
+						RelativePath=".\Scene\Actor\Monster\Monster.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\Monster.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterBarnacle.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterBarnacle.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterDefine.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterFish.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterFish.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterFly.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterFly.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterGroundBiont.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterGroundBiont.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterSaw.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\Monster\MonsterSaw.h"
+						>
+					</File>
+				</Filter>
+				<Filter
+					Name="NPC"
+					>
+					<File
+						RelativePath=".\Scene\Actor\NPC\NPC.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\NPC\NPC.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Scene\Actor\NPC\NPCDefine.h"
+						>
+					</File>
+				</Filter>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="UI"
+			>
+			<File
+				RelativePath=".\UI\GUI.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\UI\GUI.h"
+				>
+			</File>
+			<Filter
+				Name="Item"
+				>
+				<File
+					RelativePath=".\UI\Item\Bag.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Item\Bag.h"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Item\Goods.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Item\Goods.h"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Item\ItemDefine.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Dialog"
+				>
+				<File
+					RelativePath=".\UI\Dialog\DlgDefine.h"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Dialog\NPCDialog.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Dialog\NPCDialog.h"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Dialog\ShopDialog.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Dialog\ShopDialog.h"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Dialog\TaskDialog.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\UI\Dialog\TaskDialog.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Task"
+				>
+				<File
+					RelativePath=".\Scene\Task\Task.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Scene\Task\Task.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Scene\Task\TaskDeflne.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Scene\Task\TaskManager.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\Scene\Task\TaskManager.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 	</Files>

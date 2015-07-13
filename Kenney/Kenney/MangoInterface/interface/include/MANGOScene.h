@@ -34,8 +34,16 @@ typedef VOID (CALLBACK *PCALLBACKMANGOGUIEVENT) ( UINT nEvent, int nControlID, C
 //-----------------------------------------------------------------------------
 struct MANGOElementHolder
 {
+	MANGOElementHolder()
+		:nControlType(0)
+		,nResourceType(0)
+		,iElement(0)
+	{
+
+	}
 	UINT nControlType;
 	UINT iElement;
+	UINT nResourceType;
 
 	CMANGOElement Element;
 };
@@ -67,9 +75,9 @@ public:
 	~CMANGOScene();
 
 	// Need to call this now
-	void Init( CMANGOResourceManager* pManager, bool bRegisterDialog = true, char*  psCodexFilename = ".\\interface\\info\\default.codex" );
-	void Init( CMANGOResourceManager* pManager, bool bRegisterDialog, LPCWSTR pszControlTextureFilename, char*  psCodexFilename = ".\\interface\\info\\default.codex");
-	void Init( CMANGOResourceManager* pManager, bool bRegisterDialog, LPCWSTR szControlTextureResourceName, HMODULE hControlTextureResourceModule, char*  psCodexFilename = ".\\interface\\info\\default.codex");
+	void Init( CMANGOResourceManager* pManager, bool bRegisterDialog = true, char*  psCodexFilename = "Resource\\Layout\\default.codex" );
+	void Init( CMANGOResourceManager* pManager, bool bRegisterDialog, LPCWSTR pszControlTextureFilename, char*  psCodexFilename = "Resource\\Layout\\default.codex");
+	void Init( CMANGOResourceManager* pManager, bool bRegisterDialog, LPCWSTR szControlTextureResourceName, HMODULE hControlTextureResourceModule, char*  psCodexFilename = "Resource\\Layout\\default.codex");
 
 	// Windows message handler
 	bool MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam );
@@ -77,7 +85,7 @@ public:
 	// Control creation
 	HRESULT AddImage( int ID, int x, int y, int width, int height ,float z = 1.0f, bool bIsDefault=false, CMANGOImage** ppCreated=NULL);
 	HRESULT AddLable( int ID, LPCWSTR strText, int x, int y, int width, int height ,float z = 1.0f, bool bIsDefault=false, CMANGOLable** ppCreated=NULL );
-	HRESULT AddButton( int ID, LPCWSTR strText, int x, int y, int width, int height ,float z = 1.0f, UINT nHotkey=0, bool bIsDefault=false, CMANGOButton** ppCreated=NULL );
+	HRESULT AddButton( int ID, LPCWSTR strText, int x, int y, int width, int height ,float z = 1.0f, int type=0, UINT nHotkey=0, bool bIsDefault=false, CMANGOButton** ppCreated=NULL );
 	HRESULT AddCheckBox( int ID, LPCWSTR strText, int x, int y, int width, int height ,float z = 1.0f, bool bChecked=false, UINT nHotkey=0, bool bIsDefault=false, CMANGOCheckBox** ppCreated=NULL);
 	HRESULT AddRadioButton( int ID, UINT nButtonGroup, LPCWSTR strText, int x, int y, int width, int height ,float z = 1.0f, bool bChecked=false, UINT nHotkey=0, bool bIsDefault=false, CMANGORadioButton** ppCreated=NULL );
 	HRESULT AddComboBox( int ID, int x, int y, int width, int height ,float z = 1.0f, UINT nHotKey=0, bool bIsDefault=false, CMANGOComboBox** ppCreated=NULL);
@@ -86,8 +94,8 @@ public:
 	HRESULT AddIMEEditBox( int ID, LPCWSTR strText, int x, int y, int width, int height ,float z = 1.0f, bool bIsDefault=false, CMANGOIMEEditBox** ppCreated=NULL );
 	HRESULT AddListBox( int ID, int x, int y, int width, int height ,float z = 1.0f, DWORD dwStyle=0, CMANGOListBox** ppCreated=NULL );
 	HRESULT AddScrollBar( int ID, int x, int y, int width, int height ,float z = 1.0f, int iTrackStart = 0, int iTrackEnd = 10, int iTrackPos = 0, int iPageSize = 1, CMANGOScrollBar** ppCreated = NULL );
-	HRESULT AddControl( CMANGOControl* pControl );
-	HRESULT InitControl( CMANGOControl* pControl );
+	HRESULT AddControl( CMANGOControl* pControl, int type=0 );
+	HRESULT InitControl( CMANGOControl* pControl, int type=0 );
 
 	// Control retrieval
 	CMANGOImage*       GetImageByID( int ID ) { return (CMANGOImage*) GetControl( ID, MANGO_CONTROL_IMAGE ); }
@@ -112,8 +120,8 @@ public:
 	void ClearComboBox( int ID );
 
 	// Access the default display Elements used when adding new controls
-	HRESULT        SetDefaultElement( UINT nControlType, UINT iElement, CMANGOElement* pElement );
-	CMANGOElement* GetDefaultElement( UINT nControlType, UINT iElement );
+	HRESULT        SetDefaultElement( UINT nControlType, UINT iElement, CMANGOElement* pElement, int type=0 );
+	CMANGOElement* GetDefaultElement( UINT nControlType, UINT iElement, int type=0 );
 
 	// Methods called by controls
 	void SendEvent( UINT nEvent, bool bTriggeredByUser, CMANGOControl* pControl );

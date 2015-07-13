@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TASKLIST>
+  <TaskFile File=".\Task\Empty.xml" Name="0"/>
+  <TaskFile File=".\Task\Task.xml" Name="1"/>
+  <TaskFile File=".\Task\Empty.xml" Name="2"/>
+  <TaskFile File=".\Task\Empty.xml" Name="3"/>
+  <TaskFile File=".\Task\Empty.xml" Name="4"/>
+  <TaskFile File=".\Task\Empty.xml" Name="5"/>
+</TASKLIST>

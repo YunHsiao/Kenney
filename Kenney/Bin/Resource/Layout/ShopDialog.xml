@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="gb2312" standalone="yes" ?>
+<MANGOGUI ID ='3' name="NPCTaskDialog" width ='170' height='170' Texture ="Resource\\Layout\\spritesheet.png" codex="Resource\\Layout\\default.codex">
+<Image ID="3101" x="497" y="167" z="0.51" width="286" height="386" left="863" top="17" right="949" bottom="103"/>
+<Image ID="3102" x="490" y="160" z="0.51" width="7" height="7" left="856" top="10" right="863" bottom="17"/>
+<Image ID="3103" x="783" y="160" z="0.51" width="7" height="7" left="949" top="10" right="956" bottom="17"/>
+<Image ID="3104" x="783" y="553" z="0.51" width="7" height="7" left="949" top="103" right="956" bottom="110"/>
+<Image ID="3105" x="490" y="553" z="0.51" width="7" height="7" left="856" top="103" right="863" bottom="110"/>
+<Image ID="3106" x="490" y="167" z="0.51" width="7" height="386" left="856" top="17" right="863" bottom="103"/>
+<Image ID="3107" x="497" y="160" z="0.51" width="286" height="7" left="863" top="10" right="949" bottom="17"/>
+<Image ID="3108" x="783" y="167" z="0.51" width="7" height="386" left="949" top="17" right="956" bottom="103"/>
+<Image ID="3109" x="497" y="553" z="0.51" width="286" height="7" left="863" top="103" right="949" bottom="110"/>
+
+  <Button ID='1501'  x='765' y='167' z='0.5' width ='18' height='18'type='1202'></Button>
+</MANGOGUI>

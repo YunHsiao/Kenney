@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Backgroud>4</Backgroud>
+
+<Brush>
+    <Element index="20" x="448" y="704"/>
+    <Element index="23" x="1536" y="704"/>
+    <Element index="26" x="512" y="704"/>
+    <Element index="27" x="384" y="704"/>
+    <Element index="29" x="768" y="576"/>
+    <Element index="30" x="896" y="576"/>
+    <Element index="30" x="832" y="576"/>
+    <Element index="31" x="960" y="576"/>
+    <Element index="32" x="512" y="640"/>
+    <Element index="33" x="384" y="640"/>
+    <Element index="34" x="0" y="704"/>
+    <Element index="35" x="768" y="704"/>
+    <Element index="35" x="832" y="704"/>
+    <Element index="35" x="896" y="704"/>
+    <Element index="35" x="960" y="704"/>
+    <Element index="35" x="1024" y="704"/>
+    <Element index="35" x="1088" y="704"/>
+    <Element index="35" x="1152" y="704"/>
+    <Element index="35" x="1216" y="704"/>
+    <Element index="35" x="1280" y="704"/>
+    <Element index="35" x="1344" y="704"/>
+    <Element index="35" x="1408" y="704"/>
+    <Element index="35" x="1472" y="704"/>
+    <Element index="35" x="128" y="704"/>
+    <Element index="35" x="192" y="704"/>
+    <Element index="35" x="256" y="704"/>
+    <Element index="35" x="320" y="704"/>
+    <Element index="35" x="448" y="640"/>
+    <Element index="35" x="64" y="704"/>
+    <Element index="35" x="576" y="704"/>
+    <Element index="35" x="640" y="704"/>
+    <Element index="35" x="704" y="704"/>
+    <Element index="116" x="64" y="512"/>
+    <Element index="117" x="128" y="512"/>
+    <Element index="118" x="192" y="512"/>
+    <Element index="119" x="256" y="512"/>
+    <Element index="123" x="1472" y="512"/>
+    <Element index="148" x="1408" y="640" TriggerID="1"/>
+    <Element index="149" x="1408" y="576"/>
+    <Element index="150" x="1280" y="640" TriggerID="2"/>
+    <Element index="151" x="1280" y="576"/>
+    <Element index="152" x="832" y="512"/>
+    <Element index="155" x="832" y="640"/>
+    <Element index="155" x="832" y="576"/>
+    <Element index="172" x="1536" y="640"/>
+    <Element index="175" x="704" y="256"/>
+    <Element index="175" x="640" y="256"/>
+</Brush>
+
+<Monster>
+    <Element index="2" x="1088" y="448"/>
+    <Element index="7" x="1152" y="640"/>
+    <Element index="8" x="960" y="512"/>
+</Monster>
+
+<NPC>
+    <Element index="2" x="256" y="576"/>
+</NPC>
+
+<Trigger/>
+
+<Collision/>

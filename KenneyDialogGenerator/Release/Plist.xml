@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sprite id="blue_boxCheckmark.png" left="976" top="10" right="1014" bottom="46"/>
+
+<Sprite id="blue_boxCross.png" left="976" top="66" right="1014" bottom="102"/>
+
+<Sprite id="blue_boxTick.png" left="568" top="856" right="604" bottom="892"/>
+
+<Sprite id="blue_button00.png" left="436" top="10" right="626" bottom="59"/>
+
+<Sprite id="blue_button01.png" left="10" top="424" right="200" bottom="469"/>
+
+<Sprite id="blue_button02.png" left="646" top="10" right="836" bottom="59"/>
+
+<Sprite id="blue_button03.png" left="220" top="424" right="410" bottom="469"/>
+
+<Sprite id="blue_button04.png" left="10" top="79" right="200" bottom="128"/>
+
+<Sprite id="blue_button05.png" left="430" top="475" right="620" bottom="520"/>
+
+<Sprite id="blue_button06.png" left="670" top="355" right="719" bottom="404"/>
+
+<Sprite id="blue_button07.png" left="739" top="355" right="788" bottom="404"/>
+
+<Sprite id="blue_button08.png" left="778" top="646" right="827" bottom="691"/>
+
+<Sprite id="blue_button09.png" left="670" top="424" right="719" bottom="473"/>
+
+<Sprite id="blue_button10.png" left="847" top="646" right="896" bottom="691"/>
+
+<Sprite id="blue_button11.png" left="739" top="424" right="788" bottom="473"/>
+
+<Sprite id="blue_button12.png" left="916" top="652" right="965" bottom="697"/>
+
+<Sprite id="blue_button13.png" left="220" top="79" right="410" bottom="128"/>
+
+<Sprite id="blue_checkmark.png" left="736" top="906" right="757" bottom="926"/>
+
+<Sprite id="blue_circle.png" left="684" top="830" right="720" bottom="866"/>
+
+<Sprite id="blue_cross.png" left="740" top="830" right="758" bottom="848"/>
+
+<Sprite id="blue_panel.png" left="856" top="10" right="956" bottom="110"/>
+
+<Sprite id="blue_sliderDown.png" left="985" top="583" right="1013" bottom="625"/>
+
+<Sprite id="blue_sliderLeft.png" left="220" top="817" right="259" bottom="848"/>
+
+<Sprite id="blue_sliderRight.png" left="279" top="817" right="318" bottom="848"/>
+
+<Sprite id="blue_sliderUp.png" left="985" top="645" right="1013" bottom="687"/>
+
+<Sprite id="blue_tick.png" left="10" top="966" right="27" bottom="983"/>
+
+<Sprite id="dropdownBottom.png" left="10" top="749" right="200" bottom="773"/>
+
+<Sprite id="dropdownMid.png" left="220" top="749" right="410" bottom="773"/>
+
+<Sprite id="dropdownTop.png" left="10" top="793" right="200" bottom="817"/>
+
+<Sprite id="green_boxCheckmark.png" left="976" top="122" right="1014" bottom="158"/>
+
+<Sprite id="green_boxCross.png" left="970" top="178" right="1008" bottom="214"/>
+
+<Sprite id="green_boxTick.png" left="778" top="841" right="814" bottom="877"/>
+
+<Sprite id="green_button00.png" left="430" top="79" right="620" bottom="128"/>
+
+<Sprite id="green_button01.png" left="10" top="489" right="200" bottom="534"/>
+
+<Sprite id="green_button02.png" left="640" top="79" right="830" bottom="128"/>
+
+<Sprite id="green_button03.png" left="220" top="489" right="410" bottom="534"/>
+
+<Sprite id="green_button04.png" left="10" top="148" right="200" bottom="197"/>
+
+<Sprite id="green_button05.png" left="430" top="540" right="620" bottom="585"/>
+
+<Sprite id="green_button06.png" left="832" top="370" right="881" bottom="419"/>
+
+<Sprite id="green_button07.png" left="901" top="370" right="950" bottom="419"/>
+
+<Sprite id="green_button08.png" left="640" top="700" right="689" bottom="745"/>
+
+<Sprite id="green_button09.png" left="832" top="439" right="881" bottom="488"/>
+
+<Sprite id="green_button10.png" left="709" top="700" right="758" bottom="745"/>
+
+<Sprite id="green_button11.png" left="901" top="439" right="950" bottom="488"/>
+
+<Sprite id="green_button12.png" left="778" top="711" right="827" bottom="756"/>
+
+<Sprite id="green_button13.png" left="220" top="148" right="410" bottom="197"/>
+
+<Sprite id="green_checkmark.png" left="836" top="953" right="857" bottom="973"/>
+
+<Sprite id="green_circle.png" left="834" top="841" right="870" bottom="877"/>
+
+<Sprite id="green_cross.png" left="740" top="868" right="758" bottom="886"/>
+
+<Sprite id="green_panel.png" left="850" top="130" right="950" bottom="230"/>
+
+<Sprite id="green_sliderDown.png" left="985" top="707" right="1013" bottom="749"/>
+
+<Sprite id="green_sliderLeft.png" left="338" top="817" right="377" bottom="848"/>
+
+<Sprite id="green_sliderRight.png" left="397" top="865" right="436" bottom="896"/>
+
+<Sprite id="green_sliderUp.png" left="985" top="769" right="1013" bottom="811"/>
+
+<Sprite id="green_tick.png" left="121" top="837" right="138" bottom="854"/>
+
+<Sprite id="grey_arrowDownGrey.png" left="777" top="1004" right="792" bottom="1014"/>
+
+<Sprite id="grey_arrowDownWhite.png" left="936" top="1001" right="951" bottom="1011"/>
+
+<Sprite id="grey_arrowUpGrey.png" left="10" top="1004" right="25" bottom="1014"/>
+
+<Sprite id="grey_arrowUpWhite.png" left="45" top="1004" right="60" bottom="1014"/>
+
+<Sprite id="grey_box.png" left="970" top="234" right="1008" bottom="270"/>
+
+<Sprite id="grey_boxCheckmark.png" left="970" top="290" right="1008" bottom="326"/>
+
+<Sprite id="grey_boxCross.png" left="970" top="346" right="1008" bottom="382"/>
+
+<Sprite id="grey_boxTick.png" left="624" top="886" right="660" bottom="922"/>
+
+<Sprite id="grey_button00.png" left="10" top="554" right="200" bottom="599"/>
+
+<Sprite id="grey_button01.png" left="430" top="148" right="620" bottom="197"/>
+
+<Sprite id="grey_button02.png" left="220" top="554" right="410" bottom="599"/>
+
+<Sprite id="grey_button03.png" left="640" top="148" right="830" bottom="197"/>
+
+<Sprite id="grey_button04.png" left="430" top="605" right="620" bottom="650"/>
+
+<Sprite id="grey_button05.png" left="10" top="10" right="205" bottom="59"/>
+
+<Sprite id="grey_button06.png" left="225" top="10" right="416" bottom="59"/>
+
+<Sprite id="grey_button07.png" left="668" top="493" right="717" bottom="542"/>
+
+<Sprite id="grey_button08.png" left="737" top="493" right="786" bottom="542"/>
+
+<Sprite id="grey_button09.png" left="847" top="711" right="896" bottom="756"/>
+
+<Sprite id="grey_button10.png" left="806" top="508" right="855" bottom="557"/>
+
+<Sprite id="grey_button11.png" left="916" top="717" right="965" bottom="762"/>
+
+<Sprite id="grey_button12.png" left="875" top="508" right="924" bottom="557"/>
+
+<Sprite id="grey_button13.png" left="640" top="765" right="689" bottom="810"/>
+
+<Sprite id="grey_button14.png" left="10" top="217" right="200" bottom="266"/>
+
+<Sprite id="grey_button15.png" left="220" top="217" right="410" bottom="266"/>
+
+<Sprite id="grey_checkmarkGrey.png" left="836" top="993" right="857" bottom="1013"/>
+
+<Sprite id="grey_checkmarkWhite.png" left="936" top="961" right="957" bottom="981"/>
+
+<Sprite id="grey_circle.png" left="680" top="886" right="716" bottom="922"/>
+
+<Sprite id="grey_crossGrey.png" left="946" top="847" right="964" bottom="865"/>
+
+<Sprite id="grey_crossWhite.png" left="946" top="885" right="964" bottom="903"/>
+
+<Sprite id="grey_panel.png" left="850" top="250" right="950" bottom="350"/>
+
+<Sprite id="grey_sliderDown.png" left="985" top="831" right="1013" bottom="873"/>
+
+<Sprite id="grey_sliderEnd.png" left="640" top="475" right="648" bottom="485"/>
+
+<Sprite id="grey_sliderHorizontal.png" left="220" top="793" right="410" bottom="797"/>
+
+<Sprite id="grey_sliderLeft.png" left="456" top="865" right="495" bottom="896"/>
+
+<Sprite id="grey_sliderRight.png" left="563" top="912" right="602" bottom="943"/>
+
+<Sprite id="grey_sliderUp.png" left="984" top="893" right="1012" bottom="935"/>
+
+<Sprite id="grey_sliderVertical.png" left="808" top="355" right="812" bottom="455"/>
+
+<Sprite id="grey_tickGrey.png" left="69" top="837" right="86" bottom="854"/>
+
+<Sprite id="grey_tickWhite.png" left="158" top="837" right="175" bottom="854"/>
+
+<Sprite id="red_boxCheckmark.png" left="970" top="402" right="1008" bottom="438"/>
+
+<Sprite id="red_boxCross.png" left="970" top="458" right="1008" bottom="494"/>
+
+<Sprite id="red_boxTick.png" left="890" top="847" right="926" bottom="883"/>
+
+<Sprite id="red_button00.png" left="10" top="619" right="200" bottom="664"/>
+
+<Sprite id="red_button01.png" left="430" top="217" right="620" bottom="266"/>
+
+<Sprite id="red_button02.png" left="220" top="619" right="410" bottom="664"/>
+
+<Sprite id="red_button03.png" left="944" top="514" right="993" bottom="563"/>
+
+<Sprite id="red_button04.png" left="640" top="562" right="689" bottom="611"/>
+
+<Sprite id="red_button05.png" left="709" top="765" right="758" bottom="810"/>
+
+<Sprite id="red_button06.png" left="709" top="562" right="758" bottom="611"/>
+
+<Sprite id="red_button07.png" left="778" top="776" right="827" bottom="821"/>
+
+<Sprite id="red_button08.png" left="778" top="577" right="827" bottom="626"/>
+
+<Sprite id="red_button09.png" left="847" top="776" right="896" bottom="821"/>
+
+<Sprite id="red_button10.png" left="640" top="217" right="830" bottom="266"/>
+
+<Sprite id="red_button11.png" left="10" top="286" right="200" bottom="335"/>
+
+<Sprite id="red_button12.png" left="430" top="670" right="620" bottom="715"/>
+
+<Sprite id="red_button13.png" left="220" top="286" right="410" bottom="335"/>
+
+<Sprite id="red_checkmark.png" left="80" top="993" right="101" bottom="1013"/>
+
+<Sprite id="red_circle.png" left="778" top="897" right="814" bottom="933"/>
+
+<Sprite id="red_cross.png" left="946" top="923" right="964" bottom="941"/>
+
+<Sprite id="red_panel.png" left="430" top="355" right="530" bottom="455"/>
+
+<Sprite id="red_sliderDown.png" left="984" top="955" right="1012" bottom="997"/>
+
+<Sprite id="red_sliderLeft.png" left="622" top="942" right="661" bottom="973"/>
+
+<Sprite id="red_sliderRight.png" left="777" top="953" right="816" bottom="984"/>
+
+<Sprite id="red_sliderUp.png" left="515" top="865" right="543" bottom="907"/>
+
+<Sprite id="red_tick.png" left="121" top="993" right="138" bottom="1010"/>
+
+<Sprite id="yellow_boxCheckmark.png" left="568" top="800" right="606" bottom="836"/>
+
+<Sprite id="yellow_boxCross.png" left="626" top="830" right="664" bottom="866"/>
+
+<Sprite id="yellow_boxTick.png" left="834" top="897" right="870" bottom="933"/>
+
+<Sprite id="yellow_button00.png" left="430" top="286" right="620" bottom="335"/>
+
+<Sprite id="yellow_button01.png" left="10" top="684" right="200" bottom="729"/>
+
+<Sprite id="yellow_button02.png" left="640" top="286" right="830" bottom="335"/>
+
+<Sprite id="yellow_button03.png" left="220" top="684" right="410" bottom="729"/>
+
+<Sprite id="yellow_button04.png" left="10" top="355" right="200" bottom="404"/>
+
+<Sprite id="yellow_button05.png" left="430" top="735" right="620" bottom="780"/>
+
+<Sprite id="yellow_button06.png" left="847" top="577" right="896" bottom="626"/>
+
+<Sprite id="yellow_button07.png" left="916" top="583" right="965" bottom="632"/>
+
+<Sprite id="yellow_button08.png" left="916" top="782" right="965" bottom="827"/>
+
+<Sprite id="yellow_button09.png" left="640" top="631" right="689" bottom="680"/>
+
+<Sprite id="yellow_button10.png" left="430" top="800" right="479" bottom="845"/>
+
+<Sprite id="yellow_button11.png" left="709" top="631" right="758" bottom="680"/>
+
+<Sprite id="yellow_button12.png" left="499" top="800" right="548" bottom="845"/>
+
+<Sprite id="yellow_button13.png" left="220" top="355" right="410" bottom="404"/>
+
+<Sprite id="yellow_checkmark.png" left="10" top="888" right="31" bottom="908"/>
+
+<Sprite id="yellow_circle.png" left="890" top="903" right="926" bottom="939"/>
+
+<Sprite id="yellow_cross.png" left="10" top="928" right="28" bottom="946"/>
+
+<Sprite id="yellow_panel.png" left="550" top="355" right="650" bottom="455"/>
+
+<Sprite id="yellow_sliderDown.png" left="681" top="942" right="709" bottom="984"/>
+
+<Sprite id="yellow_sliderLeft.png" left="877" top="959" right="916" bottom="990"/>
+
+<Sprite id="yellow_sliderRight.png" left="10" top="837" right="49" bottom="868"/>
+
+<Sprite id="yellow_sliderUp.png" left="729" top="946" right="757" bottom="988"/>
+
+<Sprite id="yellow_tick.png" left="158" top="993" right="175" bottom="1010"/>

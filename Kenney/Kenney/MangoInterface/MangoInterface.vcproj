@@ -19,7 +19,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="..\..\Lib"
-			IntermediateDirectory="..\..\Intermedia\$(ProjectName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\Intermediate\$(ProjectName)\$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="1"
 			>
@@ -82,7 +82,7 @@
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="..\..\Lib"
-			IntermediateDirectory="..\..\Intermedia\$(ProjectName)\$(ConfigurationName)"
+			IntermediateDirectory="..\..\Intermediate\$(ProjectName)\$(ConfigurationName)"
 			ConfigurationType="4"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
@@ -104,9 +104,11 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				Optimization="3"
 				AdditionalIncludeDirectories="..\tinyxml2"
 				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
 				RuntimeLibrary="2"
+				BufferSecurityCheck="false"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="false"

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<NPCLIST>
+  <NPC ID="3001" Name="Beige"/>
+  <NPC ID="3002" Name="Blue"/>
+  <NPC ID="3003" Name="Green"/>
+  <NPC ID="3004" Name="Pink"/>
+  <NPC ID="3005" Name="Yellow"/>
+</NPCLIST>

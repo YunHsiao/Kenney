@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TASKSYSTEM>
+    <Task ID="4" Name="寻找古怪的Beige" TaskType="3">
+        <ProvideNpcID FromMapID="1">3005</ProvideNpcID>
+        <RegainNpcID FromMapID="0">3001</RegainNpcID>
+        <ItemsID FromMapID="0" Count="0">0</ItemsID>
+        <Info>据说古怪的Beige藏在KenneyLand的某个地方，你能找到他吗？</Info>
+        <Receipt>我知道你一定能行^_^</Receipt>
+        <Accept>我能~~</Accept>
+        <Refuse>找不到...</Refuse>
+        <Repeat>你还没有去嘛？</Repeat>
+        <Unfinished>我知道你一定能行^_^</Unfinished>
+        <Finished>你好，我是Beige.</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+</TASKSYSTEM>

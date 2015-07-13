@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Item>
+	<Item ID="0" Name="ALL / NONE"/>
+	<Item ID="2001" Name="monsterBarnacle"/>
+	<Item ID="2002" Name="monsterBee"/>
+	<Item ID="2003" Name="monsterFishBlue"/>
+	<Item ID="2004" Name="monsterFishGreen"/>
+	<Item ID="2005" Name="monsterFishPink"/>
+	<Item ID="2006" Name="monsterFly"/>
+	<Item ID="2007" Name="monsterFrog"/>
+	<Item ID="2008" Name="monsterLadybug"/>
+	<Item ID="2009" Name="monsterMouse"/>
+	<Item ID="2010" Name="monsterSaw"/>
+	<Item ID="2011" Name="monsterSawHalf"/>
+	<Item ID="2012" Name="monsterSlimeBlock"/>
+	<Item ID="2013" Name="monsterSlimeBlue"/>
+	<Item ID="2014" Name="monsterSlimeGreen"/>
+	<Item ID="2015" Name="monsterSlimePurple"/>
+	<Item ID="2016" Name="monsterSnail"/>
+	<Item ID="2017" Name="monsterWormGreen"/>
+	<Item ID="2018" Name="monsterWormPink"/>
+</Item>

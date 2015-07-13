@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Monster>
+    <SubTexture id="2001" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+
+    <SubTexture id="2002" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+
+    <SubTexture id="2003" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+
+    <SubTexture id="2004" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+
+    <SubTexture id="2005" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+
+    <SubTexture id="2006" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+
+    <SubTexture id="2007" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2008" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2009" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2010" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2011" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2012" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2013" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2014" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2015" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2016" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2017" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+  
+    <SubTexture id="2018" RestTime="6" MirrorTime="9" DefElapse="4" GravityWater="200" Gravity="800" JumpHeight="400" DefSpe="120"/>
+</Monster>

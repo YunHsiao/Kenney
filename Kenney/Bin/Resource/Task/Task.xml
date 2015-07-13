@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TASKSYSTEM>
+    <Task ID="0" Name="清理鼠害" TaskType="1">
+        <ProvideNpcID FromMapID="1">3002</ProvideNpcID>
+        <RegainNpcID FromMapID="5">3002</RegainNpcID>
+        <ItemsID FromMapID="5" Count="2">2009</ItemsID>
+        <Info>最近鼠害十分猖獗，你能帮我清除地图5所有的老鼠吗？</Info>
+        <Receipt>我代表KenneyLand向你致敬。</Receipt>
+        <Accept>交给我吧</Accept>
+        <Refuse>暂时不了</Refuse>
+        <Repeat>看起来你还没有清理够喔。</Repeat>
+        <Unfinished>看起来你并没有清除干净喔。</Unfinished>
+        <Finished>KenneyLand感谢你的付出。</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+    <Task ID="1" Name="保护公路" TaskType="1">
+        <ProvideNpcID FromMapID="1">3002</ProvideNpcID>
+        <RegainNpcID FromMapID="1">3002</RegainNpcID>
+        <ItemsID FromMapID="0" Count="4">0</ItemsID>
+        <Info>上面的几个地图是我们回家的必经之路，可现在那里怪物成群，你可以帮我清理掉它们吗？</Info>
+        <Receipt>真是太感谢你了！</Receipt>
+        <Accept>没问题</Accept>
+        <Refuse>我做不到...</Refuse>
+        <Repeat>看起来你还没有清理够喔。</Repeat>
+        <Unfinished>加油，很快就要做好了~</Unfinished>
+        <Finished>谢谢你，现在我们不用担心路上的危险了~</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+    <Task ID="2" Name="收集宝石" TaskType="2">
+        <ProvideNpcID FromMapID="1">3003</ProvideNpcID>
+        <RegainNpcID FromMapID="1">3003</RegainNpcID>
+        <ItemsID FromMapID="1" Count="4">0</ItemsID>
+        <Info>你能收集齐这张地图的所有宝石吗？</Info>
+        <Receipt>加油~</Receipt>
+        <Accept>当然可以</Accept>
+        <Refuse>我找不到...</Refuse>
+        <Repeat>还没有找到吗？</Repeat>
+        <Unfinished>加油~</Unfinished>
+        <Finished>恭喜你~</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+    <Task ID="3" Name="收集金币" TaskType="2">
+        <ProvideNpcID FromMapID="1">3004</ProvideNpcID>
+        <RegainNpcID FromMapID="1">3004</RegainNpcID>
+        <ItemsID FromMapID="0" Count="100">0</ItemsID>
+        <Info>你能为我收集100个金币吗？</Info>
+        <Receipt>谢谢你~</Receipt>
+        <Accept>这简单</Accept>
+        <Refuse>不行...</Refuse>
+        <Repeat>快去吧~</Repeat>
+        <Unfinished>加油~</Unfinished>
+        <Finished>你真好，请收下这100个金币作为小礼~</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+    <Task ID="4" Name="寻找古怪的Beige" TaskType="3">
+        <ProvideNpcID FromMapID="1">3005</ProvideNpcID>
+        <RegainNpcID FromMapID="0">3001</RegainNpcID>
+        <ItemsID FromMapID="0" Count="0">0</ItemsID>
+        <Info>据说古怪的Beige藏在KenneyLand的某个地方，你能找到他吗？</Info>
+        <Receipt>我知道你一定能行^_^</Receipt>
+        <Accept>我能~~</Accept>
+        <Refuse>找不到...</Refuse>
+        <Repeat>你还没有去嘛？</Repeat>
+        <Unfinished>我知道你一定能行^_^</Unfinished>
+        <Finished>你好，我是Beige.</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+</TASKSYSTEM>

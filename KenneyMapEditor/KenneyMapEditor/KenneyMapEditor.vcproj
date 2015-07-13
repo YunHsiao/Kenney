@@ -19,7 +19,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="..\Bin"
-			IntermediateDirectory="..\Intermedia\$(ConfigurationName)"
+			IntermediateDirectory="..\Intermediate\$(ConfigurationName)"
 			ConfigurationType="1"
 			UseOfMFC="2"
 			CharacterSet="1"
@@ -103,7 +103,7 @@
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="..\Bin"
-			IntermediateDirectory="..\Intermedia\$(ConfigurationName)"
+			IntermediateDirectory="..\Intermediate\$(ConfigurationName)"
 			ConfigurationType="1"
 			UseOfMFC="1"
 			CharacterSet="1"

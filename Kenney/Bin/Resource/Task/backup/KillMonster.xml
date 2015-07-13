@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TASKSYSTEM>
+    <Task ID="0" Name="清理鼠害" TaskType="1">
+        <ProvideNpcID FromMapID="1">3002</ProvideNpcID>
+        <RegainNpcID FromMapID="5">3002</RegainNpcID>
+        <ItemsID FromMapID="5" Count="2">2009</ItemsID>
+        <Info>最近鼠害十分猖獗，你能帮我清除地图5所有的老鼠吗？</Info>
+        <Receipt>我代表KenneyLand向你致敬。</Receipt>
+        <Accept>交给我吧</Accept>
+        <Refuse>暂时不了</Refuse>
+	<Repeat>看起来你还没有清理够喔。</Repeat>
+        <Unfinished>看起来你并没有清除干净喔。</Unfinished>
+        <Finished>KenneyLand感谢你的付出。</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+    <Task ID="1" Name="保护公路" TaskType="1">
+        <ProvideNpcID FromMapID="1">3002</ProvideNpcID>
+        <RegainNpcID FromMapID="1">3002</RegainNpcID>
+        <ItemsID FromMapID="0" Count="4">0</ItemsID>
+        <Info>上面的几个地图是我们回家的必经之路，可现在那里怪物成群，你可以帮我清理掉它们吗？</Info>
+        <Receipt>真是太感谢你了！</Receipt>
+        <Accept>没问题</Accept>
+        <Refuse>我做不到...</Refuse>
+	<Repeat>看起来你还没有清理够喔。</Repeat>
+        <Unfinished>加油，很快就要做好了~</Unfinished>
+        <Finished>谢谢你，现在我们不用担心路上的危险了~</Finished>
+        <Stars>0</Stars>
+        <G>0</G>
+        <S>0</S>
+        <C>100</C>
+    </Task>
+</TASKSYSTEM>

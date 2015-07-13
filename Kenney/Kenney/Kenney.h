@@ -1,4 +1,5 @@
-#pragma once
+#ifndef KENNEY
+#define KENNEY
 
 class CGame
 {
@@ -29,3 +30,5 @@ protected:
 private:
 	CMANGOSceneManager m_SceneManager;
 };
+
+#endif

@@ -124,6 +124,7 @@ public:
 private:
 	CDialogTest*	m_pMapTest;
 	std::wstring	m_szMapName;		// 地图名字
+	CPoint			m_pLastBrush;
 	BOOL			m_bIsLBotton;		// 是否进行了鼠标点击(碰撞层绘制用)
 	BOOL			m_bIsLine;			// 是否绘制网格
 	BOOL			m_bIsRedLine;		// 是否绘制红色边框
